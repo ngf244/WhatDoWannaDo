@@ -5,133 +5,164 @@
 <head>
 <meta charset="UTF-8">
 <style>
-	#content{
-		width: 100%;
-		min-height: 600px;
-	}
-	#left-side{
-		float:left;
-		width: 12%;
-		display: inline-block;
-		min-height: 600px;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		margin: auto;
-	}
 	#main {
-		width : 70%;
-		display : inline-block;
-		min-height : 600px;
-		/* margin-bottom: 20px; */
-		margin: auto;
-		position:static;
-		z-index:0;
-		/* border: 1px solid black; */
+		background-color: rgba(224, 224, 224, 0.16);
 	}
-	#right-side{
-		float:right;
-		width : 16.5%;
-		min-height : 600px;
-		display: inline-block;
-		margin-bottom: 20px;
-		margin: auto;
-	}
-	#slideBar {
-		margin-top: 50px;
-		width: 100%;
-		height: 200px;
+	#logoImg {
+		display: inline-table;
+		width: 50px; 
+		height: 50px; 
+		margin: 10px;
+		line-height: 50px;
+		
 		border: 1px solid black;
 	}
-	
-	.mainHeaderBar{text-align:left; width: 100%; height: 30px;	border: 1px solid black; }
- 	#mainBar {
-		margin-top: 20px;
+	#mainTitle {
+		display: inline-table;
+		height: 50px;
+		font-size: 18pt;
+		font-weight: bold;
+		line-height: 50px;
+		margin: 10px;
+	}
+	#writeForm {
+		margin-top: 30px;
+		border-top: 2px solid gray;
+		padding: 10px;
+	}
+	.leftLine {
+		display: inline-table;
+		width: 20%;
+		height: 50px;
+		font-size: 16pt;
+		text-align: center;
+		line-height: 50px;
+		margin: 10px;
+		font-weight: bold;
+	}
+	.rightLine {
+		display: inline-table;
+		width: 70%;
+		height: 50px;
+		font-size: 16pt;
+		line-height: 50px;
+	}
+	#content {
 		width: 100%;
-		height: 200px;
-		border: 1px solid black;		} 
-
-
-	
-	#img-thumbnail1{width:50px; height:50px; border: 1px solid black; display:inline-block;}
-
-	#requestForm{background-color: rgba(224, 224, 224, 0.16); height: 500px; position:relative; z-index:100;}
-
+		height: 500px;
+	}
+	#btnList {
+		text-align: center;
+		margin-top: 30px;
+	}
+	.button {
+		display: inline-table;
+		width: 150px;
+		height: 50px;
+		margin: 10px;
+		line-height: 50px;
+		font-size: 14pt;
+		text-align: center;
+		background-color: rgb(224, 224, 224);
+		border-radius: 5px;
+		cursor: pointer;
+		font-weight: bold;
+	}
 </style>
 <title>Insert title here</title>
 </head>
 <body>
 	<jsp:include page="../../common/mainHeader.jsp"/>
 	<section>
-		<div id="content" style="border: 2px solid black;">
-			<div id="left-side" style="background-color: yellow;">
-				<div>왼쪽 영역</div>
+		<div id="left-side"></div>
+
+		<div id="main" >
+			<!-- 로고로 만들어서 제작 -->
+			<div id="logoImg">
+				<img src=''>
 			</div>
-	
-			<!-- 공용영역 -->
-			<div id="main" >
-				<button>돌아가기</button>
+			<div id="mainTitle">
+				디자인 요청 상세 내용
+			</div>
+			
+			<form id="writeForm">
+				<div class="leftLine">
+					카테고리
+				</div>
+				<div class="rightLine">
+					<select id="categoryDropDown">
+						<option value="로고 이미지">로고 이미지</option>
+						<option value="편집 이미지">편집 이미지</option>
+						<option value="기타 이미지">기타 이미지</option>
+					</select>
+					카테고리박스 좀더 이쁘게 만들 궁리중
+				</div>
+				
+				<div class="leftLine">
+					의뢰인
+				</div>
+				<div class="rightLine">
+					홍길동
+				</div>
+				
+				<div class="leftLine">
+					제목
+				</div>
+				<div class="rightLine">
+					<input type="text" value="제목들어갈부분">
+				</div>
+				
+				<div class="leftLine" style="width: auto">
+					무엇을 디자인해드릴까요?
+				</div>
 				
 				<br>
 				
-				<div id="requestForm"> 
+				<textarea id="content">
+					프로젝트 해온 팀들이 게시판 api 크게 2개
+					서머노트랑 네이버에디터 많이 사용한다고 하는데
+					서머노트는 쉬운대신에 구리고
+					네이버에디터는 반대래욤 
+				</textarea>
+				
+				<hr> <!-- 나중에 2px solid gray 로 수정 -->
+				
 					<!-- 로고로 만들어서 제작 -->
-					<img id="img-thumbnail1" src='http://drive.google.com/uc?export=view&id=1V079qDax9ljZ2SVYWDtJaQ8JZOgKxLrB'><div>디자인 요청 상세 내용</div>
-					
-					<hr>
-				
-					<div id="categoryForm">
-						<div class="categoryName">카테고리
-							<select id="categoryDropDown">
-								<option value="로고 이미지">로고 이미지</option>
-								<option value="편집 이미지">편집 이미지</option>
-								<option value="기타 이미지">기타 이미지</option>
-							</select>
-						</div>
-					</div>
-					
-					<div>
-						<div id="requesterNickForm">의뢰인
-							<span id="requesterNick">홍길동</span>					
-						</div> 
-					</div>
-				
-					<div>
-						<div id="requestContentForm">무엇을 디자인해드릴까요?
-							<div id="reuqestContent">
-								<textarea>내용</textarea>
-							</div>
-						</div>
-					
-					</div>
-				
-				
-					<hr>
-					
-					
-					<div>
-						<div id="attachmentsFilesForm">
-							자료첨부 파일
-						</div>
-						
-						<div>
-							<input type="text"><input type="file">
-						</div>
-					
-					</div>
-					
-				
-				
+				<div id="logoImg">
+					<img src=''>
+				</div>
+				<div id="mainTitle">
+					자료 첨부파일
 				</div>
 				
-				<button>작성완료</button>
-			<!-- main영역 끝 -->	
-			</div>
-			
-			<!-- 공용영역 -->
-			<div id="right-side" style="background: blue">
-				<div>오른쪽 영역</div>
-			</div>
+				<br><input type="file">
+				<br><input type="file">
+				<br><input type="file">
+				<br><input type="file">
+				파일첨부도 더 이쁜걸로 수정<br>
+				
+				<div id="btnList">
+					<div id="submit" class="button">작성완료</div>
+					<div id="cancle" class="button">돌아가기</div>
+				</div>
+				
+				<script>
+					$('#submit').hover(function(){
+						$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
+					}, function(){
+						$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
+					});
+					$('#cancle').hover(function(){
+						$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
+					}, function(){
+						$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
+					})
+				</script>
+			</form>
 		</div>
+		
+		<!-- 공용영역 -->
+		<div id="right-side"></div>
 	</section>
 	<jsp:include page="../../common/footer.jsp"/>
 </body>

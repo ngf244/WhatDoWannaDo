@@ -42,18 +42,82 @@
 		border: 1px solid black;
 	}
 	
-	.mainHeaderBar{text-align:left; width: 100%; height: 30px;	border: 1px solid black; }
- 	#mainBar {
-		margin-top: 20px;
-		width: 100%;
-		height: 200px;
-		border: 1px solid black;		} 
+	#randomThumbnail{margin-left: 850px; margin-top: 80px; width: 200px; height:200px; border: 1px solid black; display: inline; position: absolute; }
 	
-	#buttonList button:nth-child(3){float:right;}
-    #manyProject{margin-top: 20px; margin-left: 10px;  border:0px; background:#ffeeee;}
+	.mainHeaderBar{margin-top: 50px; text-align:left; width: 100%; height: 100px; border: 1px solid black; }
+ 	#mainBar {
+		margin-top: 40px;
+		width: 100%;
+		height: 100px;
+		border: 1px solid black;		} 
+	#buttonList{margin-top: 80px; }
+	#buttonList button:nth-child(1){margin-left: 20px;}
+	#buttonList button:nth-child(3){float:right;margin-right: 20px;}
+    #manyProject{margin-top: 20px; width: 250px; margin-left: 10px;  border:0px; background:#ffeeee; }
 
-	#buttonSelectNSerch{margin-top: 20px; }
-	#buttonSelectNSerch > .buttonSerch{float:right;}
+
+
+				
+		
+	/* 카테고리, 진행상태 버튼 */		
+	#buttonSelectNSerch{margin-top: 20px; position: relative; display: inline-block;}
+	#buttonSelect{
+			background-color: #FFDAB9;
+			padding: 8px;
+			font-size: 15px;
+			border: none;
+		}		
+	#buttonSelectNSerch{display: block; border: 1px solid black;}	
+	#dropCategory{position: relative; display: inline-block;}	
+	.dropdown-category{			
+			display: none;
+			position: absolute;
+			background-color: #FFDAB9;
+			min-width: 75px;
+			padding: 5px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}	
+	.dropdown-category a{
+			color: black;
+			padding: 8px;
+			text-decoration: none;
+			display: block;
+	}
+	
+	.dropdown-category a:hover { background-color: #CD853F; }
+	#dropCategory:hover .dropdown-category { display: block; }	 
+	#dropCategory:hover #buttonSelect{ background-color: #CD853F; }
+	
+	
+	#progressSelect{
+		background-color: #FFDAB9;
+		padding: 8px;
+		font-size: 15px;
+		border: none;
+	}	
+	#dropProgress{position: relative; display: inline-block;}	
+	.dropdown-prgress{			
+			display: none;
+			position: absolute;
+			background-color: #FFDAB9;
+			min-width: 75px;
+			padding: 5px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}	
+	.dropdown-prgress a{
+			color: black;
+			padding: 8px;
+			text-decoration: none;
+			display: block;
+	}
+	
+	.dropdown-prgress a:hover { background-color: #CD853F; }
+	#dropProgress:hover .dropdown-prgress { display: block; }	 
+	#dropProgress:hover #progressSelect{ background-color: #CD853F; }
+			
+	#buttonSelectNSerch > .buttonSerch{position: relative; background-color: #FFDAB9; padding: 8px; font-size: 15px;
+			border: none; float:right;}
+	
+	
+	
 	
 	#img-thumbnail1{width:100px; height:100px; border: 1px solid black;}
 	
@@ -68,13 +132,15 @@
 	#onelist > #contentName{}
 	#pageNum{border: 1px solid black; text-align: center;}
 	
+	
+	
 </style>
 <title>Insert title here</title>
 </head>
 <body>
 	<jsp:include page="../../common/mainHeader.jsp"/>
 	<section>
-		<div id="content" style="border: 2px solid black;">
+		<div id="content" >
 			<div id="left-side" style="background-color: yellow;">
 				<div>왼쪽 영역</div>
 			</div>
@@ -82,7 +148,10 @@
 			
 	
 			<!-- 공용영역 -->
-			<div id="main" style="background: red">
+			<div id="main" style="background: white;">
+				<div id="randomThumbnail"> 
+					랜덤 사진값
+				</div>
 				<!-- 게시판 리스트 상단 -->
 				<div id="oneHeader">
 					<div class="mainHeaderBar">콘테스트 프로젝트</div>
@@ -101,12 +170,25 @@
 				
 				<hr>
 				
-				<input type="text" id="manyProject" name="manyContestProject" value="총 000개의 프로젝트" readonly="readonly" >  
+				<input type="text" id="manyProject" name="manyContestProject" value="총 000개의 프로젝트가 선정되었습니다." readonly="readonly" >  
 				
 					
 				<div id="buttonSelectNSerch">
-					<!-- 부트스트랩으로 아래로 창 열리게 해야 함.  -->
-					<button id="buttonSelect">카테고리 / 진행상태</button>				
+					<div id="dropCategory">
+						<button id="buttonSelect">&nbsp; 전체 카테고리 &nbsp;</button>
+							<div class="dropdown-category">
+								<a href="#">로고 디자인</a>
+								<a href="#">편집 디자인</a>
+								<a href="#">기타 디자인</a>
+							</div>
+					</div>
+					<div id="dropProgress">					
+						<button id="progressSelect">진행상태</button>
+							<div class="dropdown-prgress">
+								<a href="#">진행 중</a>
+								<a href="#">마감</a>
+							</div>				
+					</div>		
 					<input type="button" class="buttonSerch" value="검색"><input type="text" class="buttonSerch">
 				</div>
 				

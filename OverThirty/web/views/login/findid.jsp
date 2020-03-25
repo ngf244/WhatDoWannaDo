@@ -7,67 +7,62 @@
 <title>아이디찾기</title>
 <style>
 
-	.Id{
-	
-	margin-top: 80px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid red;
-	height: 70px;
-	background: red;
-	}
-	
-	.email{
+	.findidtitle{
 	
 	margin-top: 150px;
 	text-align: center;
-	height: auto; width: 100%; border: 1px solid black;
-	height: 70px;
-	background: black;
-	color: white;
-	}
-	
-	.idfindbutton{
-	
-	margin-top: 150px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid green;
-	height: 70px;
-	background: green;
-	color: white;
-	
+	color: black;
 	
 	}
+
+   .nameform{
+   margin-top: 70px;
+   width: 37%;
+   height: 50px;
+   font-size: 20px;
+   }
 	
-	.findIdtitle{
 	
-	margin-top: 100px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid green;
-	height: 70px;
-	background: green;
-	color: white;
+   .emailform{
+   margin-top: 10px;
+   width: 37%;
+   height: 50px;
+   font-size: 20px;
+   }	
+	
+   .findform{
+   text-align:center;
+   }	
+	
+	.findbutton{
+	
+	margin-top: 10px;
+	width: 37.3%;
+	height: 50px;
 	
 	}
+	
 
 </style>
 </head>
 <body>
 
-		<div class="findIdtitle">아이디찾기(타이틀)
+		<div class="findidtitle">
+		<h3>아이디 찾기</h3>
+		</div>
+		
 	
 	
-		<div class="Id">아이디 입력란
+		<div class="findform">
+			<input type="text" name="username" class="nameform" placeholder="이름"> <br>
+         	<input type="text" name="email" class="emailform" placeholder="이메일 "><br>
+			<button type="button" class="findbutton">아이디 찾기</button>
+		</div>
 		
 		
-		<div class="email">이메일 입력란 
+			
 		
-		
-		<div class="idfindbutton">버튼
 		
 				 
-				</div>
-			</div>
-		</div>
-	</div>
 </body>
 </html>

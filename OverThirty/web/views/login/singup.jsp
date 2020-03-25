@@ -6,135 +6,115 @@
 <meta charset="UTF-8">
 <title>회원가입</title>
 <style>
+
+
 	.singuptitle{
 	
+	margin-top: 60px;
 	text-align: center;
-	height: auto; width: 100%; border: 1px solid black;
-	height: 70px; 	
-	background: black;
-	color: white;
 	}
 	
-	.singupId{
+	.singup{
+	
+	}
+		
+	.titletext{
 	margin-top: 50px;
 	text-align: center;
-	height: auto; width: 100%; border: 1px solid blue;
-	height: 50px;
-	background: blue
-	}
-	
-	.singupPwd{
-	margin-top: 30px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid red;
-	height: 50px;
-	background: red;
-	}
-	
-	.singupName{
-	margin-top: 30px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid yellow;
-	height: 50px;
-	background: yellow;
-	}
-	
-	.singupEmail{
-	margin-top: 30px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid green;
-	height: 50px;
-	background: green;
-	}
-	
-	.singupBirtday{
-	margin-top: 30px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid red;
-	height: 50px;
-	background: red;
-	}
-
-	.singupGender{
-	margin-top: 30px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid black;
-	height: 50px;
-	background: black;
-	}	
-	
-	.singupPhone{
-	margin-top: 30px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid white;
-	height: 50px;
-	background: white;
-	color: black;
-	}
-	
-	
-	.singupIntro{
-	margin-top: 30px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid green;
-	height: 80px;
-	background: green;
-	}
-	
-	.singupbutton{
-	margin-top: 30px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid red;
-	height: 50px;
-	background: red;
-	}
-	
-	
-	
-	
+    
+    }
+    
+    .inputForm{
+   width: 37%;
+   height: 50px;
+   font-size: 20px;
+   }
+   
+   .birthform{
+   width: 10.5%;
+   height: 40px;
+   font-size: 15px;
+   
+   }
+   
+   .select{
+   width: 15%;
+   height: 45.2px;
+   font-size: 15px;
+   }
+   
+   .selfintro{
+   width : 37%;
+   height : 300px;
+   
+   }
+   
+   .signbutton{
+   text-align:center;
+   
+   }
+   
+   #signbutton{
+   margin-top: 10px;
+   text-align: center;
+   height : 45px;
+   width : 37.3%;
+   
+   }
+   
 
 </style>
 </head>
 <body>
-		<div class="singuptitle"> 회원가입(타이틀)
+	<div class="singuptitle">
+      <img src="<%= request.getContextPath() %>/sources/image/logintitle.png" id="logo">
+    </div>			
 			
-		
-		<div class="singupId">아이디 입력란(중복확인)
-		
-		
-		<div class="singupPwd">비밀번호 입력란()
-		
-	
-		<div class="singupName">이름 입력란
-		
-
-		<div class="singupEmail">이메일 입력란	
-		
-		
-		<div class="singupBirtday">생일입력란
-		
-		
-		<div class="singupGender">성별입력란
-		
-		
-		<div class="singupPhone">휴대폰 본인 인증
-
-
-		<div class="singupIntro">자기소개
-		
-		
-		<div class="singupbutton">가입버튼
-		
-		
-		  </div>
-		 </div>		
+		<div class="titletext"><h4>아이디</h4>
+			<input type="text" id="singId" name="singinId" class="inputForm">
 		</div>
-	  </div>		
-	 </div>		
-	</div>
-   </div>
-  </div>
- </div>
-</div>
+				
+		<div class="titletext"><h4>비밀번호</h4>
+			<input type="text" id="singPwd" name="singinPwd" class="inputForm">
+		</div>
+		
+		
+		<div class="titletext"><h4>비밀번호 재확인</h4>
+			<input type="text" id="singId" name="singreinPwd" class="inputForm">
+		</div>
+		
+		
+		<div class="titletext"><h4>이름</h4>
+			<input type="text" id="singname" name="singinname" class="inputForm">
+		</div>
+		
+		<div class="titletext"><h4>생년월일</h4>
+			<input type="text" id="singId" name="singyyyy" class="birthform" placeholder="&nbsp;년(4자)입력" maxlength="4">	
+	      		<select id="mm" class="select">
+				<option value="">월</option>
+				<option value="01">1</option>
+				<option value="02">2</option>
+				<option value="03">3</option>
+            	<option value="04">4</option>
+				<option value="05">5</option>
+		    	<option value="06">6</option>
+				<option value="07">7</option>
+				<option value="08">8</option>
+				<option value="09">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+		</select>
+			<input type="text" id="singId" name="singmm" class="birthform" placeholder="일" maxlength="2">	
+		</div>	
+		
+		
+		<div class="titletext"><h4>자기소개</h4>
+			<input type="text" id="intro" class="selfintro">
+		</div>
+			
+		<div class="signbutton">
+			<button type="button" id="signbutton">가입하기</button>
+		</div>	
 </body>
 </html>

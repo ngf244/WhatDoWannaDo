@@ -157,7 +157,7 @@
 	<c:set var="contextPath" value="${ pageContext.servletContext.contextPath }" scope="application"/>
 	<header>
 		<div id="titleHeader">
-			<img id="mainIcon" src="${ contextPath }/views/images/왓두로고.png">
+			<img id="mainIcon" src="${ contextPath }/views/images/logo.png">
 			<div id="mainLetter"><img src="${ contextPath }/views/images/왓두글자.PNG"></div>
 			<div id="mainSearch">검색 기능 들어갈 부분</div>
 			<div id="basicForm">

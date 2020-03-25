@@ -42,7 +42,7 @@
 		border: 1px solid black;
 	}
 	
-	#randomThumbnail{margin-left: 850px; margin-top: 80px; width: 200px; height:200px; border: 1px solid black; display: inline; position: absolute; }
+	#randomThumbnail{margin-left: 950px; margin-top: 80px; width: 250px; height:250px; border: 1px solid black; display: inline; position: absolute; }
 	
 	.mainHeaderBar{margin-top: 50px; text-align:left; width: 100%; height: 100px; border: 1px solid black; }
  	#mainBar {
@@ -53,15 +53,17 @@
 	#buttonList{margin-top: 80px; }
 	#buttonList button:nth-child(1){margin-left: 20px;}
 	#buttonList button:nth-child(3){float:right;margin-right: 20px;}
-    #manyProject{margin-top: 20px; width: 250px; margin-left: 10px;  border:0px; background:#ffeeee; }
+	
+    #manyProject{margin-top: 20px; width: 360px; margin-left: 20px;  font-size:20px; border:0px; background:#ffeeee; }
 
 
-
+ 
 				
 		
 	/* 카테고리, 진행상태 버튼 */		
-	#buttonSelectNSerch{margin-top: 20px; position: relative; display: inline-block;}
+	#buttonSelectNSerch{margin-top: 20px;  margin-left: 20px; margin-right:20px; position: relative; display: inline-block;}
 	#buttonSelect{
+			
 			background-color: #FFDAB9;
 			padding: 8px;
 			font-size: 15px;
@@ -119,18 +121,27 @@
 	
 	
 	
-	#img-thumbnail1{width:100px; height:100px; border: 1px solid black;}
-	
-	#onelist{border: 1px solid black;}
+	#onelistForm{margin-left:20px; margin-right:20px; margin-top:50px;}
+	#img-thumbnail1{width:200px; height:200px; border: 1px solid black;}
 	#onelistTable tr{border: 1px solid black; }
 	#onelistTable td{border: 1px solid black;}
-	#onelistTable tr:nth-child(1) td:nth-child(2){border: 2px solid black; width:510px;}
-	#onelistTable tr:nth-child(1) td:nth-child(3){border: 3px solid black; width:auto;}
+	#onelistTable tr:nth-child(1) td:nth-child(2){border: 2px solid black; width:900px; height: 10px;}
+	#onelistTable tr:nth-child(1) td:nth-child(3){border: 3px solid black; width:300px; height: 80px; }
 	#onelist {border: 1px solid black;}
 	#onelist > #categoryName{border:0px;}
 	#onelist > #oneName{border:0px; }
 	#onelist > #contentName{}
-	#pageNum{border: 1px solid black; text-align: center;}
+	#categoryName{display: inline-block; height:40px;}
+	#categorySubject{display: inline-block;}
+	#contentName{height:100px;}
+	
+	/* 상금 */
+	#moneyDiv{ line-height: 100px; text-align: center;}
+	.howMoney{font-size: 20px; background-color: rgba(224, 224, 224, 0.5); }
+	.winMoney{font-size: 20px; background-color: rgba(224, 224, 224, 0.5); }
+		
+	/* 쪽번호 위치 */
+	#pageNum{margin-left:20px; margin-right:20px; border: 1px solid black; background-color: pink; text-align: center;}
 	
 	
 	
@@ -204,11 +215,12 @@
 								<img id="img-thumbnail1" src='http://drive.google.com/uc?export=view&id=1V079qDax9ljZ2SVYWDtJaQ8JZOgKxLrB'>
 							</td>
 							<td>
-								<div id="categoryName">로고 디자인  &nbsp; | &nbsp; 제목</div> 
+								<div id="categoryName">로고 디자인  </div>
+								<div id="categorySubject"> | 제목</div>
 								<div >의뢰인 : editor1</div>
 							</td>
 							<td>
-								<span class="howMoney">상금&nbsp;&nbsp;&nbsp;</span><span class="winMoney">&nbsp;&nbsp;700,000원</span>
+								<div id="moneyDiv"><span class="howMoney">상금&nbsp;&nbsp;&nbsp;</span><span class="winMoney">&nbsp;&nbsp;700,000원</span></div>
 							</td>
 						</tr>
 						<tr>
@@ -221,51 +233,7 @@
 						</tr>
 					</table>
 					
-					<table id="onelistTable">
-						<tr>
-							<td  rowspan="3">
-								<img id="img-thumbnail1" src='http://drive.google.com/uc?export=view&id=1V079qDax9ljZ2SVYWDtJaQ8JZOgKxLrB'>
-							</td>
-							<td>
-								<div id="categoryName">로고 디자인  &nbsp; | &nbsp; 제목</div> 
-								<div >의뢰인 : editor1</div>
-							</td>
-							<td>
-								<span class="howMoney">상금&nbsp;&nbsp;&nbsp;</span><span class="howMoney">&nbsp;&nbsp;700,000원</span>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div id="contentName">내용</div>		
-							</td>
-							<td>
-								<span id="dDay-editor">모집 마감일&nbsp;</span><span>3/21(토) </span> <span>지원자  </span> <span>2명</span>
-							</td>
-						</tr>
-					</table>
 					
-					<table id="onelistTable">
-						<tr>
-							<td  rowspan="3">
-								<img id="img-thumbnail1" src='http://drive.google.com/uc?export=view&id=1V079qDax9ljZ2SVYWDtJaQ8JZOgKxLrB'>
-							</td>
-							<td>
-								<div id="categoryName">로고 디자인  &nbsp; | &nbsp; 제목</div> 
-								<div >의뢰인 : editor1</div>
-							</td>
-							<td>
-								<span class="howMoney">상금&nbsp;&nbsp;&nbsp;</span><span class="howMoney">&nbsp;&nbsp;700,000원</span>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div id="contentName">내용</div>		
-							</td>
-							<td>
-								<span id="dDay-editor">모집 마감일&nbsp;</span><span>3/21(토) </span> <span>지원자  </span> <span>2명</span>
-							</td>
-						</tr>
-					</table>
 				</form>
 				
 				<div id="pageNum">

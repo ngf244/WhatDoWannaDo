@@ -8,11 +8,12 @@
 <style>
 
 	.boardtitle{
-	margin-top: 90px;
+	margin-top: 40px;
 	text-align: left;
-	height: auto; width: 100%; border: 1px solid red;
-	background: red;
-	height: 70px; 	
+	background: white;
+	height: 60px; 	
+	color: black;
+	height-bottom: auto; width: 100%; border: 5px solid blue;
 	}
 
 	.menubar{
@@ -20,20 +21,18 @@
 	}
 	
 	.boardmenu{
-	margin-top: 50px;
+	margin-top: 30px;
 	text-align: left;
-	height: auto; width: 100%; border: 1px solid blue;
-	background: blue;
-	height: 200px; 	
+	background: skyblue;
+	height: 420px; 
 	}
 	
 	.boardWriting{
 	
-	margin-top: 150px;
+	margin-top: 390px;
 	text-align: left;
-	height: auto; width: 100%; border: 1px solid black;
 	background: black;
-	height: 100px; 	
+	height: 40px; 	
 	color: white;
 	}
 	
@@ -47,15 +46,14 @@
 		<div id="left-side" style="background-color: yellow;">
 		</div>
 		<div id="main" style="background: red">
-			<div class ="menubar"> 메인타이틀 영역
 			
-				<div class ="boardtitle"> 자유갤러리 (게시판 이름표시)영역
+				<div class ="boardtitle"> 자유갤러리
 			
 					<div class ="boardmenu"> 게시판 번호/제목/작성자/조회수/추천 영역
 			
 						<div class="boardWriting">글쓰기 / 페이징 넘기는 부분
-						
-						</div>
+							
+							
 					</div>
 				</div>		
 			</div>

@@ -7,87 +7,88 @@
 <title>비밀번호 찾기</title>
 <style>
 
-	.findPwdtitle{
 	
-	margin-top: 10px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid black;
-	height: 70px; 	
-	background: black;
-	color: white;
+	.findpwdtitle{
+	
+	margin-top: 80px;
+	text-align:center;
 	
 	}
 	
 	.findPwdForm{
-	
 	margin-top: 100px;
 	text-align: center;
-	height: auto; width: 100%; border: 1px solid red;
-	height: 70px; 	
-	background: red;
-	color: white;
+	}
+	
+	.inputForm{
+   	width: 29%;
+   	height: 50px;
+   	font-size: 20px;
+	}
+	
+	
+	.phonenum{
+	margin-top: 20px;
+	width: 10%;
+	height: 50px;
+	font-size: 20px;
+	}
+	}
 	
 	}
 	
-	.findPwd{
-	
-	margin-top: 10px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid blue;
-	height: 70px; 	
-	background: blue;
-	color: white;
-	
-	}
 	
 	.findPwdphone {
 	
 	margin-top: 10px;
 	text-align: center;
-	height: auto; width: 100%; border: 1px solid green;
 	height: 70px; 	
-	background: green;
-	color: white;
 	
 	}
-	
-	.myinfo{
-	
-	margin-top: 120px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid black;
-	height: 70px; 	
-	background: black;
-	color: white;
-	
-	}
-	
 	
 	.findPwdname{
 	
 	margin-top: 30px;
 	text-align: center;
-	height: auto; width: 100%; border: 1px solid yellow;
 	height: 70px; 	
-	background: yellow;
-	color: white;
 	
 	}
 	
-	.findPwdemail{
+	#inbutton{
+	width: 8%;
+	height: 56.5px;
 	
-	margin-top: 30px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid pink;
-	height: 70px; 	
-	background: pink;
-	color: white;
+	}
+	
+	.phoneatt{
+	margin-top: 10px;
+	width: 27%;
+   	height: 50px;
+   	font-size: 20px;
 	
 	}
 	
 	
+	.infoemail{
+	margin-top: 50px;
 	
-
+	}
+	
+	.findname{
+	width: 20%;
+	height: 50px;
+	font-size: 20px;
+	
+	}
+	
+	.findemail{
+	
+	margin-top: 20px;
+	width: 20%;
+	height: 50px;
+	
+		
+	}
 
 
 </style>
@@ -97,25 +98,34 @@
 </body>
 
 	
-	<div class="findPwdtitle">비밀번호 찾기(타이틀)
+	
+	<div class="findpwdtitle"> 휴대폰 인증으로 찾기
+	
+	</div>
+	
+	<div class="findPwdForm">
+		이름<input type="text" id="loginId" name="userId" class="inputForm"><br>
+			<input type="text" id="phone" name="userId" class="phonenum">
+				<input type="text" id="phone" name="userId" class="phonenum">
+					<input type="text" id="phone" name="userId" class="phonenum">
+						<button type="button" id="inbutton">인증번호 발송</button>
+	<div>
+	
+	<div class="findPwdphone">
+		<input type="text" id="att" name="attnum" class="phoneatt">
+	</div>
 	
 	
-	<div class="findPwdForm">비밀번호 찾기
+	<div class="infoemail"> 이메일로 찾기
 	
 	
-	<div class="findPwd">이름 form
+	<div class="findPwdname">
+		이름  <input type="text" id="email" name="username" class="findname"> <br>
+		이메일 <input type="text" id="email" name="useremail" class="findemail">
+			<button type="button" id="inbutton">임시번호</button>
+	</div>	
 	
 	
-	<div class="findPwdphone">휴대폰 인증란 (버튼) 인증번호 폼
-	
-	
-	<div class="myinfo">본인 인증란(타이틀)
-	
-	
-	<div class="findPwdname">이름이메일 폼
-	
-	
-	<div class="findPwdemail">이메일 폼 (버튼)
 	
 	
 	

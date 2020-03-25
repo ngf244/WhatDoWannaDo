@@ -18,6 +18,8 @@
    width: auto;
    padding-bottom: 20px;
    }
+   
+   
    .loginform {
          text-align: center;
    }
@@ -35,9 +37,6 @@
    	height: 50px;
   	font-size: 20px;
     }
-    
-   
-    
    
    
    #loginBtn{
@@ -49,23 +48,30 @@
    
    }
    
-   .kakaobutton{
-   
-   margin-top: 90px;
+   #kakaoBtn{
+   margin-top: 10px;
    text-align: center;
-   height: auto; width: 100%; border: 1px solid black;
-   height: 70px;    
+   width: 37.5%;
+   height: 50px;
+   font-size: 20px;
+   
    }
    
-   .apilogin{
+   #googleBtn{
    
-   margin-top: 50px;
+   margin-top: 10px;
    text-align: center;
-   height: auto; width: 100%; border: 1px solid blue;
-   height: 70px;    
-   }
+   width: 37.5%;
+   height: 50px;
+   font-size: 20px;
    
    }
+   
+   .title{
+   margin-top: 10px;
+   text-align: center;
+   }
+   
 </style>
 </head>
 <body>
@@ -73,17 +79,18 @@
       <div class="loginTitle">
          <img src="<%= request.getContextPath() %>/sources/image/logintitle.png" id="logo">
       </div>
+      		
+      <div class="title">		
+      		<h5>회원가입시 등록한 아이디 와 비밀번호를 입력해주세요</h5>
+      		<h5>회원가입시 더 다양한 커뮤니티를 즐길수 있습니다</h5>
+      </div>
       
       <div class="loginform">
          <input type="text" id="loginId" name="userId" class="inputForm" placeholder="&nbsp;아이디" > <br>
-         <input type="password" id="loginPw" name="password" class="inputPwForm" placeholder="&nbsp;비밀번호" ><br>
-            
-         <button type="button" id="loginBtn">로그인 </button>
+         	<input type="password" id="loginPw" name="password" class="inputPwForm" placeholder="&nbsp;비밀번호" ><br>
+            	<button type="button" id="loginBtn">로그인 </button><br>
+            		<button type="button" id="kakaoBtn">카카오아이디 로그인</button><br>
+         				<button type ="button" id="googleBtn">구글아이디 로그인</button>
       </div>
-      
-      <div class="kakaobutton">kakao login button 영역</div>
-      
-      <div class="conditions"> 이용약관 등 영역</div>
-               
 </body>
 </html>

@@ -6,33 +6,38 @@
 <meta charset="UTF-8">
 <title>아이디/비밀번호 찾기 선택</title>
 <style>
-	.findIdbutton{
+
+	.findbutton{
 	
-	margin-top: 200px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid blue;
-	height: 70px;
-	background: blue;
+	text-align:center;
+	
 	}
+		
 	
-	.findPwdbutton{
+	.findidbutton{
+	margin-top: 180px;
+	width: 50%;
+	align:center;
+	height: 130px;
 	
-	margin-top: 100px;
+	
+	}
+
+	.findpwdbutton{
+	
+	margin-top: 40px;
+	width: 50%;
 	text-align: center;
-	height: auto; width: 100%; border: 1px solid red;
-	height: 70px;
-	background: red;
+	height: 130px;
 	
 	}
 </style>
 </head>
 <body>
-	
-	<div class="findIdbutton">아이디 찾기
-	
-	<div class="findPwdbutton">비밀번호 찾기
-	
-		</div>
-	</div>
+			<div class="findbutton">
+				<button type="button" class="findidbutton">아이디 찾기</button><br><br>
+				<button type="button" class="findpwdbutton">비밀번호 찾기</button>
+			</div>
+
 </body>
 </html>

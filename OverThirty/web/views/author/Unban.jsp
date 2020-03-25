@@ -33,7 +33,20 @@
         margin-right: auto;
         margin-bottom: 30px;
     }
+    
+    table{
+        width: 100%;
+    }
 
+    table>tr{
+        border: 1px solid black;
+        color: red;
+    }
+
+    /* tr:first-child{
+        border: 1px solid black;
+        color: red;
+    } */
     
 </style>
 <title>Insert title here</title>
@@ -49,7 +62,18 @@
         <div id="main" style="background: red">
             <div id="unbanMain" style="background-color: white;">
                 <div class="banListLetter">제재 리스트</div>
-                <div class="banList" style="background-color: brown;">text</div>
+                <div class="banList">
+                    <table>
+                        <tr>
+                            <th>유저 아이디</th>
+                            <th>사유</th>
+                            <th>상세 내역</th>
+                            <th>제재 등록일</th>
+                            <th>제재 해제일</th>
+                            <th>해제</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ddf
 		</div>

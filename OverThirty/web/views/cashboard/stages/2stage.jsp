@@ -218,7 +218,7 @@
 		
 		<div id="right-side"></div>
 	</section>
-	<jsp:include page="../common/footer.jsp"/>
+	<jsp:include page="../../common/footer.jsp"/>
 	
 </body>
 </html>

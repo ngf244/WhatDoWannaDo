@@ -62,11 +62,8 @@
 		width: 45%;
 		height: 80%;
 		background: lightblue;
-		margin-left: 9px;
+		margin-left: 15px;
 		text-align: center;
-		cursor: pointer;
-		line-height: 60px;
-		font-size: 15pt;
 	}
 	
 	.deleteBtn{
@@ -74,11 +71,7 @@
 		width: 45%;
 		height: 80%;		
 		background: lightblue;
-		margin-left: 9px;
-		text-align: center;
-		cursor: pointer;
-		line-height: 60px;
-		font-size: 15pt;						
+		text-align: center;				
 	}
 	
 </style>
@@ -97,9 +90,7 @@
 				</div>
 				<div id="portpolioListContent">
 					<div class="portpolioView">
-						<div class="portpolioImageArea">
-							
-						</div>
+						<div class="portpolioImageArea"></div>
 						<div class="portpolioDesc">
 							<div class="normalDesc"></div>
 							<div class="DesignDesc"></div>

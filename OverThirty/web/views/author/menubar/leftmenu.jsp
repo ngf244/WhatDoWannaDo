@@ -13,6 +13,7 @@
         position: fixed;
         top: 0px;
         left: 7px;
+        transition: 1s ease;
     }
     .authorMenuBtn{
         width: 80%;

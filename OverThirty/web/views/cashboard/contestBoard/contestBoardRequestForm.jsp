@@ -118,6 +118,7 @@
 						
 						<div>
 							<input type="text"><input type="file">
+							<button>삭제버튼</button>
 						</div>
 					
 					</div>

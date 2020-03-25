@@ -192,6 +192,8 @@
 						if(!($('#smallInfoContent').is(":hover"))) {
 							$('#smallInfoContent').removeClass("open");
 							$('#smallInfo').css('display', 'none');
+							setTimeout(() => {
+							}, 500);
 						}
 					});
 

@@ -64,7 +64,7 @@
 <body>
 	<jsp:include page="../../common/mainHeader.jsp"/>
 	<section>
-		<div id="content" style="border: 2px solid black;">
+		<div id="content" >
 			<div id="left-side" style="background-color: yellow;">
 				<div>왼쪽 영역</div>
 			</div>
@@ -78,10 +78,10 @@
 				<br>
 				
 				<div id="requestForm"> 
+					<div>
 					<!-- 로고로 만들어서 제작예정 -->
 					<div id="logoImgForm"><img id="img-thumbnail1" src='http://drive.google.com/uc?export=view&id=1V079qDax9ljZ2SVYWDtJaQ8JZOgKxLrB'>디자인 요청 상세 내용</div>
 					
-					<hr>
 				
 					<div id="categoryForm">
 						<div class="categoryName">카테고리
@@ -109,7 +109,6 @@
 					</div>
 				
 				
-					<hr>
 					
 					
 					<div>
@@ -119,6 +118,7 @@
 						
 						<div>
 							<input type="text"><input type="file">
+							<button>삭제버튼</button>
 						</div>
 					
 					</div>
@@ -129,6 +129,7 @@
 				
 				<button>작성완료</button>
 			<!-- main영역 끝 -->	
+				</div>
 			</div>
 			
 			<!-- 공용영역 -->

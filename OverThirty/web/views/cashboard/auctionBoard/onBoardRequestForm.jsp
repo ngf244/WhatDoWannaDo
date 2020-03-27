@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript" src="../../se2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../se2/quick_photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"> </script>
 <style>
 	#main {
 		background-color: rgba(224, 224, 224, 0.16);
@@ -32,8 +34,8 @@
 	}
 	.leftLine {
 		display: inline-table;
-		width: 20%;
-		height: 50px;
+		width: 35%;
+		min-height: 50px;
 		font-size: 16pt;
 		text-align: center;
 		line-height: 50px;
@@ -42,14 +44,41 @@
 	}
 	.rightLine {
 		display: inline-table;
-		width: 70%;
-		height: 50px;
+		width: 60%;
+		min-height: 50px;
 		font-size: 16pt;
 		line-height: 50px;
 	}
+	.br {
+		margin-top: 20px;
+	}
+	
+	#inputText {
+		width: 80%;
+		height: 40px;
+		font-size: 14pt;
+		line-height: 40px;
+	}
 	#content {
+		width: 99%;
+		height: 300px;
+	}
+	.concept {
+		width: 15%;
+		font-size: 14pt;
+		text-align: center;
+		display: inline-table;
+		
+	}
+	.slider-wrap {
+		width: 65%;
+		margin-left: 10px;
+		margin-right: 10px;
+		display: inline-table;
+	}
+	.slider {
 		width: 100%;
-		height: 500px;
+		display: inline-table;
 	}
 	#btnList {
 		text-align: center;
@@ -68,6 +97,95 @@
 		cursor: pointer;
 		font-weight: bold;
 	}
+	
+	
+	
+	
+	.range-slider__range {
+		-webkit-appearance: none;
+		width: calc(100%);
+		height: 10px;
+		border-radius: 5px;
+		background: #d7dcdf;
+		outline: none;
+		padding: 0;
+		margin: 0;
+	}
+	/* custom thumb */
+	.range-slider__range::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: #2c3e50;
+		cursor: pointer;
+		-webkit-transition: background .15s ease-in-out;
+		transition: background .15s ease-in-out;
+	}
+	.range-slider__range::-webkit-slider-thumb:hover {
+		background: #1abc9c;
+	}
+	.range-slider__range:active::-webkit-slider-thumb {
+		background: #1abc9c;
+	}
+	.range-slider__range::-moz-range-thumb {
+		width: 20px;
+		height: 20px;
+		border: 0;
+		border-radius: 50%;
+		background: #2c3e50;
+		cursor: pointer;
+		-webkit-transition: background .15s ease-in-out;
+		transition: background .15s ease-in-out;
+	}
+	.range-slider__range::-moz-range-thumb:hover {
+		background: #1abc9c;
+	}
+	.range-slider__range:active::-moz-range-thumb {
+		background: #1abc9c;
+	}
+	.range-slider__range:focus::-webkit-slider-thumb {
+		-webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+		box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+		 
+		outline: none; 
+	}
+	/* custom label */
+	.range-slider__value {
+		display: inline-block;
+		position: relative;
+		width: 60px;
+		color: #fff;
+		line-height: 20px;
+		text-align: center;
+		border-radius: 3px;
+		background: #2c3e50;
+		padding: 5px 10px;
+		margin-left: 8px;
+	}
+	.range-slider__value:after {
+		position: absolute;
+		top: 8px;
+		left: -7px;
+		width: 0;
+		height: 0;
+		border-top: 7px solid transparent;
+		border-right: 7px solid #2c3e50;
+		border-bottom: 7px solid transparent;
+		content: '';
+	}
+	/* custom track */
+	::-moz-range-track {
+		background: #d7dcdf;
+		border: 0;
+	}
+	/* remove border */
+	input::-moz-focus-inner, input::-moz-focus-outer {
+		border: 0;
+	}
+	
+	
 </style>
 <title>Insert title here</title>
 </head>
@@ -87,45 +205,97 @@
 			
 			<form id="writeForm">
 				<div class="leftLine">
-					카테고리
+					1. 어떤 작품을 원하시나요?
 				</div>
 				<div class="rightLine">
-					<select id="categoryDropDown">
-						<option value="로고 이미지">로고 이미지</option>
-						<option value="편집 이미지">편집 이미지</option>
-						<option value="기타 이미지">기타 이미지</option>
+					<b>제목</b><br>
+					<input id="inputText" type="text" value="제목들어갈부분"><br>
+					<div class="br"></div>
+					
+					<b>카테고리</b><br>
+					<select id="inputText">
+						<option value="로고 이미지">컨텐츠 제작</option>
+						<option value="편집 이미지">컨텐츠 수정</option>
+						<option value="기타 이미지">기타</option>
 					</select>
-					카테고리박스 좀더 이쁘게 만들 궁리중
+					<br>
+					카테고리박스 좀더 이쁘게 만들 궁리중<br>
+					<div class="br"></div>
+					
+					<b>의뢰인</b><br>
+					홍길동<br>
+					<div class="br"></div>
+					
+					<b>무엇을 디자인해드릴까요?</b><br>
+					<textarea name="content" id="content"></textarea>
+					<div class="br"></div>
 				</div>
+				
+				<script type="text/javascript">
+					var oEditors = [];
+					nhn.husky.EZCreator.createInIFrame({
+					 oAppRef: oEditors,
+					 elPlaceHolder: "content",
+					 sSkinURI: "../../se2/SmartEditor2Skin.html",
+					 fCreator: "createSEditor2"
+					});
+				</script>
+				
+				<div class="br" style="border-bottom: 2px solid gray"></div>
+				<div class="br"></div>
 				
 				<div class="leftLine">
-					의뢰인
+					2. 작품의 컨셉을 정해주세요.
 				</div>
 				<div class="rightLine">
-					홍길동
+					<div class="concept">우아하게</div>
+					<div class="slider-wrap">
+						<input id="concept1" class="range-slider__range" type="range" value="0" min="-50" max="50">
+					</div>
+					<div class="concept">터프하게</div>
+					
+					<div class="concept">재미있게</div>
+					<div class="slider-wrap">
+						<input id="concept2" class="range-slider__range" type="range" value="0" min="-50" max="50">
+					</div>
+					<div class="concept">진지하게</div>
+					
+					<div class="concept">화려하게</div>
+					<div class="slider-wrap">
+						<input id="concept3" class="range-slider__range" type="range" value="0" min="-50" max="50">
+					</div>
+					<div class="concept">수수하게</div>
+					
+					<div class="concept">대중적으로</div>
+					<div class="slider-wrap">
+						<input id="concept4" class="range-slider__range" type="range" value="0" min="-50" max="50">
+					</div>
+					<div class="concept">고급스럽게</div>
+					
+					<div class="concept">복고적으로</div>
+					<div class="slider-wrap">
+						<input id="concept5" class="range-slider__range" type="range" value="0" min="-50" max="50">
+					</div>
+					<div class="concept">현대적으로</div>
 				</div>
+				
+				<div class="br" style="border-bottom: 2px solid gray"></div>
+				<div class="br"></div>
 				
 				<div class="leftLine">
-					제목
+					3. 세부사항을 선택해주세요.
 				</div>
 				<div class="rightLine">
-					<input type="text" value="제목들어갈부분">
+					<b>마감일</b><br>
+					
+					<br><br>
+					
+					<b>의뢰비</b>
 				</div>
 				
-				<div class="leftLine" style="width: auto">
-					무엇을 디자인해드릴까요?
-				</div>
 				
-				<br>
 				
-				<textarea id="content">
-					프로젝트 해온 팀들이 게시판 api 크게 2개
-					서머노트랑 네이버에디터 많이 사용한다고 하는데
-					서머노트는 쉬운대신에 구리고
-					네이버에디터는 반대래욤 
-				</textarea>
-				
-				<hr> <!-- 나중에 2px solid gray 로 수정 -->
+				<br><br><br><br><br><br>
 				
 					<!-- 로고로 만들어서 제작 -->
 				<div id="logoImg">
@@ -156,6 +326,14 @@
 						$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
 					}, function(){
 						$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
+					})
+					
+					$('#submit').click(function(){
+						oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
+						console.log(document.getElementById("content").value);
+						
+						
+						console.log(document.getElementById("concept1").value);
 					})
 				</script>
 			</form>

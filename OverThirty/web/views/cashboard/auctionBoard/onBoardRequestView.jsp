@@ -48,10 +48,31 @@
 		line-height: 50px;
 	}
 	#content {
-		width: 100%;
-		height: 500px;
+		width: 70%;
+		height: 400px;
+		margin: 0 auto;
 		
 		border: 1px solid black;
+	}
+	#conceptWrap {
+		margin-top: 20px;
+	}
+	.concept {
+		width: 15%;
+		font-size: 14pt;
+		text-align: center;
+		display: inline-table;
+		
+	}
+	.slider-wrap {
+		width: 65%;
+		margin-left: 10px;
+		margin-right: 10px;
+		display: inline-table;
+	}
+	.slider {
+		width: 100%;
+		display: inline-table;
 	}
 	#downloadWrap {
 		margin-top: 30px;
@@ -111,6 +132,90 @@
 		cursor: pointer;
 		font-weight: bold;
 	}
+	
+	.range-slider__range {
+		-webkit-appearance: none;
+		width: calc(100%);
+		height: 10px;
+		border-radius: 5px;
+		background: #d7dcdf;
+		outline: none;
+		padding: 0;
+		margin: 0;
+	}
+	/* custom thumb */
+	.range-slider__range::-webkit-slider-thumb {
+		-webkit-appearance: none;
+		appearance: none;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		background: #2c3e50;
+		cursor: pointer;
+		-webkit-transition: background .15s ease-in-out;
+		transition: background .15s ease-in-out;
+	}
+	.range-slider__range::-webkit-slider-thumb:hover {
+		background: #1abc9c;
+	}
+	.range-slider__range:active::-webkit-slider-thumb {
+		background: #1abc9c;
+	}
+	.range-slider__range::-moz-range-thumb {
+		width: 20px;
+		height: 20px;
+		border: 0;
+		border-radius: 50%;
+		background: #2c3e50;
+		cursor: pointer;
+		-webkit-transition: background .15s ease-in-out;
+		transition: background .15s ease-in-out;
+	}
+	.range-slider__range::-moz-range-thumb:hover {
+		background: #1abc9c;
+	}
+	.range-slider__range:active::-moz-range-thumb {
+		background: #1abc9c;
+	}
+	.range-slider__range:focus::-webkit-slider-thumb {
+		-webkit-box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+		box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+		 
+		outline: none; 
+	}
+	/* custom label */
+	.range-slider__value {
+		display: inline-block;
+		position: relative;
+		width: 60px;
+		color: #fff;
+		line-height: 20px;
+		text-align: center;
+		border-radius: 3px;
+		background: #2c3e50;
+		padding: 5px 10px;
+		margin-left: 8px;
+	}
+	.range-slider__value:after {
+		position: absolute;
+		top: 8px;
+		left: -7px;
+		width: 0;
+		height: 0;
+		border-top: 7px solid transparent;
+		border-right: 7px solid #2c3e50;
+		border-bottom: 7px solid transparent;
+		content: '';
+	}
+	/* custom track */
+	::-moz-range-track {
+		background: #d7dcdf;
+		border: 0;
+	}
+	/* remove border */
+	input::-moz-focus-inner, input::-moz-focus-outer {
+		border: 0;
+	}
 </style>
 <title>Insert title here</title>
 </head>
@@ -158,6 +263,57 @@
 				
 				<div id="content">
 					게시판 api가 글 내용을 이쁘게 받아와 줄거임^^ 
+				</div>
+				
+				<div id="conceptWrap">
+					<div class="leftLine">
+						컨셉
+					</div>
+					<div class="rightLine">
+						<div class="concept">우아하게</div>
+						<div class="slider-wrap">
+							<input id="concept1" class="range-slider__range" type="range" value="40" min="-50" max="50" disabled>
+						</div>
+						<div class="concept">터프하게</div>
+						
+						<div class="concept">재미있게</div>
+						<div class="slider-wrap">
+							<input id="concept2" class="range-slider__range" type="range" value="-20" min="-50" max="50" disabled>
+						</div>
+						<div class="concept">진지하게</div>
+						
+						<div class="concept">화려하게</div>
+						<div class="slider-wrap">
+							<input id="concept3" class="range-slider__range" type="range" value="30" min="-50" max="50" disabled>
+						</div>
+						<div class="concept">수수하게</div>
+						
+						<div class="concept">대중적으로</div>
+						<div class="slider-wrap">
+							<input id="concept4" class="range-slider__range" type="range" value="0" min="-50" max="50" disabled>
+						</div>
+						<div class="concept">고급스럽게</div>
+						
+						<div class="concept">복고적으로</div>
+						<div class="slider-wrap">
+							<input id="concept5" class="range-slider__range" type="range" value="-50" min="-50" max="50" disabled>
+						</div>
+						<div class="concept">현대적으로</div>
+					</div>
+					
+					<div class="leftLine">
+						마감일
+					</div>
+					<div class="rightLine">
+						기한 : <span id="month">1</span>월 <span id="day">1</span>일 <span id="hour">12</span>시
+					</div>
+					
+					<div class="leftLine">
+						의뢰비
+					</div>
+					<div class="rightLine">
+						10,000 원
+					</div>
 				</div>
 				
 				<div id="downloadWrap">

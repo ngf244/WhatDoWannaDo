@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@ page import="java.text.*" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,7 +64,7 @@
 		line-height: 40px;
 	}
 	#content {
-		width: 99%;
+		width: 98%;
 		height: 300px;
 	}
 	.concept {
@@ -79,6 +83,13 @@
 	.slider {
 		width: 100%;
 		display: inline-table;
+	}
+	.selectDate {
+		width: 20%;
+		height: 40px;
+		font-size: 14pt;
+		line-height: 40px;
+		margin-right: 20px;
 	}
 	#btnList {
 		text-align: center;
@@ -185,6 +196,72 @@
 		border: 0;
 	}
 	
+	/* The switch - the box around the slider */
+	.switch {
+	  position: relative;
+	  display: inline-block;
+	  width: 60px;
+	  height: 34px;
+	  vertical-align:middle;
+	}
+	
+	/* Hide default HTML checkbox */
+	.switch input {display:none;}
+	
+	/* The slider */
+	.slider {
+	  position: absolute;
+	  cursor: pointer;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: #ccc;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+	
+	.slider:before {
+	  position: absolute;
+	  content: "";
+	  height: 26px;
+	  width: 26px;
+	  left: 4px;
+	  bottom: 4px;
+	  background-color: white;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+	
+	input:checked + .slider {
+	  background-color: #2196F3;
+	}
+	
+	input:focus + .slider {
+	  box-shadow: 0 0 1px #2196F3;
+	}
+	
+	input:checked + .slider:before {
+	  -webkit-transform: translateX(26px);
+	  -ms-transform: translateX(26px);
+	  transform: translateX(26px);
+	}
+	
+	/* Rounded sliders */
+	.slider.round {
+	  border-radius: 34px;
+	}
+	
+	.slider.round:before {
+	  border-radius: 50%;
+	}
+	
+	p {
+		margin:0px;
+		display:inline-block;
+		font-size:15px;
+		font-weight:bold;
+	}
 	
 </style>
 <title>Insert title here</title>
@@ -288,9 +365,75 @@
 				<div class="rightLine">
 					<b>마감일</b><br>
 					
-					<br><br>
+					<select id="optionDay" class="selectDate" onchange="selectDate()">
+						<option value="0">마감일</option>
+						<option value="1">1일</option>
+						<option value="2">2일</option>
+						<option value="3">3일</option>
+						<option value="4">4일</option>
+						<option value="5">5일</option>
+						<option value="6">6일</option>
+						<option value="7">7일</option>
+						<option value="8">8일</option>
+						<option value="9">9일</option>
+						<option value="10">10일</option>
+					</select>
+					<select id="optionHour" class="selectDate" onchange="selectDate()">
+						<option value="0">마감시간</option>
+						<option value="1">1시간</option>
+						<option value="2">2시간</option>
+						<option value="3">3시간</option>
+						<option value="4">4시간</option>
+						<option value="5">5시간</option>
+						<option value="6">6시간</option>
+						<option value="7">7시간</option>
+						<option value="8">8시간</option>
+						<option value="9">9시간</option>
+						<option value="10">10시간</option>
+						<option value="11">11시간</option>
+						<option value="12">12시간</option>
+					</select>
 					
-					<b>의뢰비</b>
+					기한 : <span id="month"></span>월 <span id="day"></span>일 <span id="hour"></span>시
+					<div class="br"></div>
+					
+					<script>
+						var dt = new Date();
+						$('#month').text(dt.getMonth() + 1)
+						$('#day').text(dt.getDate())
+						$('#hour').text(dt.getHours())
+						
+						function selectDate() {
+							dt = new Date();
+							
+							dt.setDate(dt.getDate() + 1);
+							console.log($('#optionDay option:selected').val())
+							/* dt.setDate(dt.getDate() + $('#optionDay option:selected').val()) */
+							/* dt.setHours(dt.setHours() + $('#optionHour option:selected').val()) */
+							
+							$('#month').text(dt.getMonth() + 1)
+							$('#day').text(dt.getDate())
+							$('#hour').text(dt.getHours())
+						}
+					</script>
+
+					<b>의뢰비</b><br>
+					<input id="inputText" type="text" value=""><br>
+					<div class="br"></div>
+					
+					<b>공개여부</b><br>
+					<label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+					</label>
+					<p>&nbsp;공개</p><p style="display:none;">&nbsp;비공개</p>
+					
+					<script>
+						var check = $("input[type='checkbox']");
+						check.click(function(){
+							$("p").toggle();
+						});
+					</script>
 				</div>
 				
 				

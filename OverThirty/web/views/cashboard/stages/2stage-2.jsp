@@ -117,10 +117,44 @@
 		width: 98%;
 		height: 300px;
 	}
-	#downloadArea {
+	#registChat {
 		width: 35%;
 		height: 500px;
 		float: right;
+		
+		border: 1px solid black;
+	}
+	#chatTitle {
+		height: 40px;
+		background-color: rgba(161, 206, 244, 0.55);
+		line-height: 40px;
+	}
+	#chatMain {
+		height: 400px;
+		
+		border: 1px solid black;
+	}
+	.leftChat {
+		float: left;
+		width: 70%;
+		background-color: rgb(224, 224, 224);
+		padding: 10px;
+		margin: 10px;
+		border-radius: 20px;
+	}
+	.rightChat {
+		float: right;
+		width: 70%;
+		background-color: rgba(243, 156, 18, 0.32);
+		text-align: right;
+		padding: 10px;
+		margin: 10px;
+		border-radius: 20px;
+	}
+	#chatBottom {
+		height: 60px;
+		
+		border: 1px solid black;
 	}
 	
 	
@@ -372,17 +406,16 @@
 						});
 					</script>
 					
-					<div id="downloadArea">
-						<div id="mainTitle">
-							자료 첨부파일
+					<div id="registChat">
+						<div id="chatTitle">1:1 채팅방</div>
+						<div id="chatMain">
+							<div class="leftChat">받은 채팅</div>
+							<div class="rightChat">보낸 채팅</div>
+							<div class="rightChat">보낸 채팅</div>
+							<div class="leftChat">받은 채팅</div>
+							<div class="leftChat">받은 채팅</div>
 						</div>
-						
-						<br>
-						
-						logo.jpg <div class="download">download</div><br>
-						logo.jpg <div class="download">download</div><br>
-						logo.jpg <div class="download">download</div><br>
-						logo.jpg <div class="download">download</div><br>
+						<div id="chatBottom">내용 입력받을 부분</div>
 					</div>
 				</div> <br>
 				

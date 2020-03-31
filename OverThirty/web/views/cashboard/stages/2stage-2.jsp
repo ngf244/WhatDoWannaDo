@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="../../se2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
 <style>
-	#main {
+	#mainWrap {
+		width: 80%;
+		margin: 0 auto;
 		background-color: rgba(224, 224, 224, 0.16);
 	}
 	#logoImg {
@@ -35,7 +36,7 @@
 		display: inline-table;
 		width: 20%;
 		height: 50px;
-		font-size: 16pt;
+		font-size: 14pt;
 		text-align: center;
 		line-height: 50px;
 		margin: 10px;
@@ -45,12 +46,15 @@
 		display: inline-table;
 		width: 70%;
 		height: 50px;
-		font-size: 16pt;
+		font-size: 13pt;
 		line-height: 50px;
 	}
+	.redColor {
+		color: rgb(224, 63, 58);
+	}
 	#maincontent {
-		width: 70%;
-		height: 400px;
+		width: 80%;
+		height: 300px;
 		margin: 0 auto;
 		
 		border: 1px solid black;
@@ -59,14 +63,14 @@
 		margin-top: 20px;
 	}
 	.concept {
-		width: 15%;
-		font-size: 14pt;
+		width: 20%;
+		font-size: 13pt;
 		text-align: center;
 		display: inline-table;
 		
 	}
 	.slider-wrap {
-		width: 65%;
+		width: 50%;
 		margin-left: 10px;
 		margin-right: 10px;
 		display: inline-table;
@@ -268,181 +272,179 @@
 		<div id="left-side"></div>
 
 		<div id="main" >
-			<!-- 로고로 만들어서 제작 -->
-			<div id="logoImg">
-				<img src=''>
-			</div>
-			<div id="mainTitle">
-				디자인 요청 상세 내용
-			</div>
-			
-			<form id="writeForm">
-				<div class="leftLine">
-					카테고리
-				</div>
-				<div class="rightLine">
-					로고 이미지
-				</div>
-				
-				<div class="leftLine">
-					의뢰인
-				</div>
-				<div class="rightLine">
-					홍길동
-				</div>
-				
-				<div class="leftLine">
-					제목
-				</div>
-				<div class="rightLine">
-					어플 로고 이미지 제작
-				</div>
-				
-				<div class="leftLine" style="width: auto">
-					무엇을 디자인해드릴까요?
-				</div>
-				
-				<br>
-				
-				<div id="maincontent">
-					게시판 api가 글 내용을 이쁘게 받아와 줄거임^^ 
-				</div>
-				
-				<div id="conceptWrap">
-					<div class="leftLine">
-						컨셉
-					</div>
-					<div class="rightLine">
-						<div class="concept">우아하게</div>
-						<div class="slider-wrap">
-							<input id="concept1" class="range-slider__range" type="range" value="40" min="-50" max="50" disabled>
-						</div>
-						<div class="concept">터프하게</div>
-						
-						<div class="concept">재미있게</div>
-						<div class="slider-wrap">
-							<input id="concept2" class="range-slider__range" type="range" value="-20" min="-50" max="50" disabled>
-						</div>
-						<div class="concept">진지하게</div>
-						
-						<div class="concept">화려하게</div>
-						<div class="slider-wrap">
-							<input id="concept3" class="range-slider__range" type="range" value="30" min="-50" max="50" disabled>
-						</div>
-						<div class="concept">수수하게</div>
-						
-						<div class="concept">대중적으로</div>
-						<div class="slider-wrap">
-							<input id="concept4" class="range-slider__range" type="range" value="0" min="-50" max="50" disabled>
-						</div>
-						<div class="concept">고급스럽게</div>
-						
-						<div class="concept">복고적으로</div>
-						<div class="slider-wrap">
-							<input id="concept5" class="range-slider__range" type="range" value="-50" min="-50" max="50" disabled>
-						</div>
-						<div class="concept">현대적으로</div>
-					</div>
-					
-					<div class="leftLine">
-						마감일
-					</div>
-					<div class="rightLine">
-						기한 : <span id="month">1</span>월 <span id="day">1</span>일 <span id="hour">12</span>시
-					</div>
-					
-					<div class="leftLine">
-						의뢰비
-					</div>
-					<div class="rightLine">
-						10,000 원
-					</div>
-				</div>
-				
-				<div id="downloadWrap">
-					<!-- 로고로 만들어서 제작 -->
-					<div id="logoImg">
-						<img src=''>
-					</div>
-					<div id="mainTitle">
-						자료 첨부파일
-					</div>
-					
-					<br>
-					
-					logo.jpg <div class="download">download</div>
-				</div>
-				
+			<div id="mainWrap">
+				<!-- 로고로 만들어서 제작 -->
 				<div id="logoImg">
 					<img src=''>
 				</div>
 				<div id="mainTitle">
-					참여 에디터 : <span>user01</span>
+					디자인 요청 상세 내용
 				</div>
 				
-				
-				<div id="registWrap">
-					<div id="registContent">
-						<div id="buyerInfo">
-							<div class="leftLine">
-								의뢰인 정보
+				<form id="writeForm">
+					<div class="leftLine">
+						<span class="redColor">＞ </span>제목
+					</div>
+					<div class="rightLine">
+						어플 로고 이미지 제작
+					</div>
+					
+					<div class="leftLine">
+						<span class="redColor">＞ </span>카테고리
+					</div>
+					<div class="rightLine">
+						로고 이미지
+					</div>
+					
+					<div class="leftLine">
+						<span class="redColor">＞ </span> 의뢰인
+					</div>
+					<div class="rightLine">
+						홍길동
+					</div>
+					
+					<div class="leftLine" style="width: auto">
+						<span class="redColor">＞ </span>무엇을 디자인해드릴까요?
+					</div>
+					
+					<br>
+					
+					<div id="maincontent">
+						글 내용을 불러올 부분
+					</div>
+					
+					<div id="conceptWrap">
+						<div class="leftLine">
+							<span class="redColor">＞ </span>컨셉
+						</div>
+						<div class="rightLine">
+							<div class="concept">우아하게</div>
+							<div class="slider-wrap">
+								<input id="concept1" class="range-slider__range" type="range" value="40" min="-50" max="50" disabled>
 							</div>
-							<div class="rightLine">
-								정문종 하나 284-891239-76707 <br>
-								010-5217-5324
+							<div class="concept">터프하게</div>
+							<br>
+							<div class="concept">재미있게</div>
+							<div class="slider-wrap">
+								<input id="concept2" class="range-slider__range" type="range" value="-20" min="-50" max="50" disabled>
 							</div>
+							<div class="concept">진지하게</div>
+							<br>
+							<div class="concept">화려하게</div>
+							<div class="slider-wrap">
+								<input id="concept3" class="range-slider__range" type="range" value="30" min="-50" max="50" disabled>
+							</div>
+							<div class="concept">수수하게</div>
+							<br>
+							<div class="concept">대중적으로</div>
+							<div class="slider-wrap">
+								<input id="concept4" class="range-slider__range" type="range" value="0" min="-50" max="50" disabled>
+							</div>
+							<div class="concept">고급스럽게</div>
+							<br>
+							<div class="concept">복고적으로</div>
+							<div class="slider-wrap">
+								<input id="concept5" class="range-slider__range" type="range" value="-50" min="-50" max="50" disabled>
+							</div>
+							<div class="concept">현대적으로</div>
 						</div>
 						
-						<textarea name="content" id="content"></textarea>
+						<div class="leftLine">
+							<span class="redColor">＞ </span>마감일
+						</div>
+						<div class="rightLine">
+							기한 : <span id="month">1</span>월 <span id="day">1</span>일 <span id="hour">12</span>시
+						</div>
+						
+						<div class="leftLine">
+							<span class="redColor">＞ </span>의뢰비
+						</div>
+						<div class="rightLine">
+							10,000 원
+						</div>
 					</div>
 					
-					<script type="text/javascript">
-						var oEditors = [];
-						nhn.husky.EZCreator.createInIFrame({
-						 oAppRef: oEditors,
-						 elPlaceHolder: "content",
-						 sSkinURI: "../../se2/SmartEditor2Skin.html",
-						 fCreator: "createSEditor2"
+					<div id="downloadWrap">
+						<!-- 로고로 만들어서 제작 -->
+						<div id="logoImg">
+							<img src=''>
+						</div>
+						<div id="mainTitle">
+							자료 첨부파일
+						</div>
+						
+						<br>
+						
+						logo.jpg <div class="download">download</div>
+					</div>
+					
+					<div id="logoImg">
+						<img src=''>
+					</div>
+					
+					<div id="mainTitle">
+						참여 에디터 : <span>user01</span>
+					</div>
+					
+					
+					<div id="registWrap">
+						<div id="registContent">
+							<div id="buyerInfo">
+								<div class="leftLine">
+									의뢰인 정보
+								</div>
+								<div class="rightLine">
+									정문종 하나 284-891239-76707 <br>
+									010-5217-5324
+								</div>
+							</div>
+							
+							<textarea name="content" id="content"></textarea>
+						</div>
+						
+						<script type="text/javascript">
+							var oEditors = [];
+							nhn.husky.EZCreator.createInIFrame({
+							 oAppRef: oEditors,
+							 elPlaceHolder: "content",
+							 sSkinURI: "../../se2/SmartEditor2Skin.html",
+							 fCreator: "createSEditor2"
+							});
+						</script>
+						
+						<div id="registChat">
+							<div id="chatTitle">1:1 채팅방</div>
+							<div id="chatMain">
+								<div class="leftChat">받은 채팅</div>
+								<div class="rightChat">보낸 채팅</div>
+								<div class="rightChat">보낸 채팅</div>
+								<div class="leftChat">받은 채팅</div>
+								<div class="leftChat">받은 채팅</div>
+							</div>
+							<div id="chatBottom">내용 입력받을 부분</div>
+						</div>
+					</div> <br>
+					
+					<div id="btnList">
+						<div id="submit" class="button">작성완료</div>
+						<div id="cancle" class="button">돌아가기</div>
+					</div>
+					
+					<script>
+						$('#submit').hover(function(){
+							$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
+						}, function(){
+							$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
 						});
+						$('#cancle').hover(function(){
+							$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
+						}, function(){
+							$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
+						})
 					</script>
 					
-					<div id="registChat">
-						<div id="chatTitle">1:1 채팅방</div>
-						<div id="chatMain">
-							<div class="leftChat">받은 채팅</div>
-							<div class="rightChat">보낸 채팅</div>
-							<div class="rightChat">보낸 채팅</div>
-							<div class="leftChat">받은 채팅</div>
-							<div class="leftChat">받은 채팅</div>
-						</div>
-						<div id="chatBottom">내용 입력받을 부분</div>
-					</div>
-				</div> <br>
-				
-				
-				
-				
-				
-				
-				
-				<div id="btnList">
-					<div id="submit" class="button">작성완료</div>
-					<div id="cancle" class="button">돌아가기</div>
-				</div>
-				
-				<script>
-					$('#submit').hover(function(){
-						$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
-					}, function(){
-						$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
-					});
-					$('#cancle').hover(function(){
-						$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
-					}, function(){
-						$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
-					})
-				</script>
-			</form>
+				</form>
+			</div>
 		</div>
 		
 		<!-- 공용영역 -->

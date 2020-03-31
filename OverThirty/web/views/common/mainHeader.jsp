@@ -19,8 +19,8 @@
 		position: relative;
 	}
 	#mainIcon {
-		width: 150px;
-		height: 150px;
+		width: auto;
+		height: 120px;
 		display: inline-block;
 		margin: 25px;
 		vertical-align: middle;
@@ -41,20 +41,27 @@
 	}
 
 	#mainSearch {
-		width: 400px;
-		height: 50px;
 		display: inline-block;
-		border: 1px solid black;
 		vertical-align: middle;
-		margin-left: 50px;
 		margin-top: 75px;
+	}
+	#mainSearch input {
+		display: inline-table;
+		width: 350px;
+		height: 34px;
+		border: 3px solid rgb(108, 191, 255);
+	}
+	#mainSearch img {
+		position: absolute;
+		width: 42px;
+		height: 42px;
 	}
 	#basicForm {
 		width: 250px;
 		height: 150px;
 		display: inline-block;
 		vertical-align: middle;
-		margin-left: 50px;
+		margin-left: 30px;
 	}
 	#loginBtn, #signupBtn, #welcomeName {
 		padding: 10px;
@@ -86,9 +93,9 @@
 	}
 	#smallInfoContent {
 		position: absolute;
-		right: -500px;
+		right: -400px;
 		background-color: white;
-		width: 500px;
+		width: 400px;
 		height: 100%;
 		float: right;
 		transition: right 0.5s ease;
@@ -97,19 +104,31 @@
 		right: 0px;
 	}
 	
-	#menuHeader {
+	#menuHeaderWrap {
 		background-color: rgb(52, 152, 219);
 		height: 60px;
-		text-align: center;
+	}
+	#menuHeader {
+		width: 70%;
+		margin: 0 auto;
 	}
 	.menubar {
+		float: left;
 		color: white;
 		display: inline-block;
 		font-size: 15pt;
 		margin: 15px;
 		cursor: pointer;
 	}
-
+	#menuHeaderText {
+		float: right;
+		color: white;
+		display: inline-block;
+		font-size: 13pt;
+		line-height: 60px;
+		margin-right: 50px;
+		max-height: 60px;
+	}
 	#noticeArea{
 		display: none;
 		border-style: outset;
@@ -158,8 +177,11 @@
 	<header>
 		<div id="titleHeader">
 			<img id="mainIcon" src="${ contextPath }/views/images/logo.png">
-			<div id="mainLetter"><img src="${ contextPath }/views/images/왓두글자.PNG"></div>
-			<div id="mainSearch">검색 기능 들어갈 부분</div>
+			<%-- <div id="mainLetter"><img src="${ contextPath }/views/images/왓두글자.PNG"></div> --%>
+			<div id="mainSearch">
+				<input type="text">
+				<img src="${ contextPath }/views/images/search.png">
+			</div>
 			<div id="basicForm">
 				<!-- 로그인 안되어 있을 때 -->
 				<!-- 
@@ -177,7 +199,13 @@
 
 				<div id="smallInfo">
 					<div id="smallInfoContent">
-						
+						<div id="smallInfoWrap">
+							김대호님
+							<br><br>
+							보유 point : 4685<br>
+							보유 cash : 7412<br><br>
+							최근 본 글							
+						</div>
 					</div>
 				</div>
 				
@@ -210,14 +238,38 @@
 			</div>
 		</div>
 		
-		<div id="menuHeader">
-			<div class="menubar">공지사항</div>
-			<div class="menubar">가이드</div>
-			<div class="menubar">사진</div>
-			<div class="menubar">미디어</div>
-			<div class="menubar">HIT 갤러리</div>
-			<div class="menubar">문의</div>
-			<div class="menubar">충전소</div>
+		<div id="menuHeaderWrap">
+			<div id="menuHeader">
+				<div class="menubar">공지사항</div>
+				<div class="menubar">가이드</div>
+				<div class="menubar">사진</div>
+				<div class="menubar">미디어</div>
+				<div class="menubar">HIT 갤러리</div>
+				<div class="menubar">문의</div>
+				<div class="menubar">충전소</div>
+				
+				<div id="menuHeaderText">
+					<span id="menuTextBoard">등록된 게시물 123개</span>
+					<span id="menuTextReply">등록된 댓글 321개</span>
+				</div>
+				
+				<script>
+					$('#menuTextReply').hide();
+					! function loop(){
+						setTimeout(function() {
+							if($("#menuTextReply").css("display") == "none"){
+								$('#menuTextBoard').hide();
+								$('#menuTextReply').slideDown();	
+							} else {
+								$('#menuTextReply').hide();
+								$('#menuTextBoard').slideDown();	
+							}
+							loop();
+						}, 1500)
+					}()
+					
+				</script>
+			</div>
 		</div>
 	</header>
 	<br>

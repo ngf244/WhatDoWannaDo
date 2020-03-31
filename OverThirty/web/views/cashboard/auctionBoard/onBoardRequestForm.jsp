@@ -11,7 +11,9 @@
 <script type="text/javascript" src="../../se2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
 <script type="text/javascript" src="../../se2/quick_photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"> </script>
 <style>
-	#main {
+	#mainWrap {
+		width: 80%;
+		margin: 0 auto;
 		background-color: rgba(224, 224, 224, 0.16);
 	}
 	#logoImg {
@@ -40,7 +42,7 @@
 		display: inline-table;
 		width: 35%;
 		min-height: 50px;
-		font-size: 16pt;
+		font-size: 15pt;
 		text-align: center;
 		line-height: 50px;
 		margin: 10px;
@@ -50,32 +52,35 @@
 		display: inline-table;
 		width: 60%;
 		min-height: 50px;
-		font-size: 16pt;
+		font-size: 14pt;
 		line-height: 50px;
 	}
 	.br {
 		margin-top: 20px;
 	}
 	
-	#inputText {
+	.inputText {
 		width: 80%;
 		height: 40px;
-		font-size: 14pt;
+		font-size: 12pt;
 		line-height: 40px;
+	}
+	#contentWrap {
+		width: 80%;
+		margin: 0 auto;
 	}
 	#content {
 		width: 98%;
 		height: 300px;
 	}
 	.concept {
-		width: 15%;
-		font-size: 14pt;
+		width: 20%;
+		font-size: 13pt;
 		text-align: center;
 		display: inline-table;
-		
 	}
 	.slider-wrap {
-		width: 65%;
+		width: 55%;
 		margin-left: 10px;
 		margin-right: 10px;
 		display: inline-table;
@@ -90,6 +95,52 @@
 		font-size: 14pt;
 		line-height: 40px;
 		margin-right: 20px;
+	}
+	.fileArea {
+		display: inline-table;
+		width: 150px;
+		margin: 5px;
+		font-size: 11pt;
+		line-height: 25px;
+		color: white;
+		background: rgba(44, 62, 80, 0.5);
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 15px;
+		border-radius: 5px;
+	}
+	.fileAreaImg {
+		width: 140px;
+		height: 140px;
+		margin: 3px;
+	}
+	.fileAreaRemove {
+		width: 20px;
+		height: 20px;
+		float: right;
+		position: relative;
+		top: 30px;
+		right: 10px;
+		z-index: 1;
+		cursor: pointer;
+	}
+	#fileAdd {
+		display: inline-table;
+		padding: 8px;
+		background-color: rgb(44, 62, 80);
+		cursor: pointer;
+		height: 30px;
+		font-size: 12pt;
+		color: white;
+		line-height: 30px;
+	}
+	#fileAdd img {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+	}
+	#fileAdd span {
+		margin-left: 40px;
 	}
 	#btnList {
 		text-align: center;
@@ -271,215 +322,266 @@
 	<section>
 		<div id="left-side"></div>
 
-		<div id="main" >
-			<!-- 로고로 만들어서 제작 -->
-			<div id="logoImg">
-				<img src=''>
-			</div>
-			<div id="mainTitle">
-				디자인 요청 상세 내용
-			</div>
-			
-			<form id="writeForm">
-				<div class="leftLine">
-					1. 어떤 작품을 원하시나요?
-				</div>
-				<div class="rightLine">
-					<b>제목</b><br>
-					<input id="inputText" type="text" value="제목들어갈부분"><br>
-					<div class="br"></div>
-					
-					<b>카테고리</b><br>
-					<select id="inputText">
-						<option value="로고 이미지">컨텐츠 제작</option>
-						<option value="편집 이미지">컨텐츠 수정</option>
-						<option value="기타 이미지">기타</option>
-					</select>
-					<br>
-					카테고리박스 좀더 이쁘게 만들 궁리중<br>
-					<div class="br"></div>
-					
-					<b>의뢰인</b><br>
-					홍길동<br>
-					<div class="br"></div>
-					
-					<b>무엇을 디자인해드릴까요?</b><br>
-					<textarea name="content" id="content"></textarea>
-					<div class="br"></div>
-				</div>
-				
-				<script type="text/javascript">
-					var oEditors = [];
-					nhn.husky.EZCreator.createInIFrame({
-					 oAppRef: oEditors,
-					 elPlaceHolder: "content",
-					 sSkinURI: "../../se2/SmartEditor2Skin.html",
-					 fCreator: "createSEditor2"
-					});
-				</script>
-				
-				<div class="br" style="border-bottom: 2px solid gray"></div>
-				<div class="br"></div>
-				
-				<div class="leftLine">
-					2. 작품의 컨셉을 정해주세요.
-				</div>
-				<div class="rightLine">
-					<div class="concept">우아하게</div>
-					<div class="slider-wrap">
-						<input id="concept1" class="range-slider__range" type="range" value="0" min="-50" max="50">
-					</div>
-					<div class="concept">터프하게</div>
-					
-					<div class="concept">재미있게</div>
-					<div class="slider-wrap">
-						<input id="concept2" class="range-slider__range" type="range" value="0" min="-50" max="50">
-					</div>
-					<div class="concept">진지하게</div>
-					
-					<div class="concept">화려하게</div>
-					<div class="slider-wrap">
-						<input id="concept3" class="range-slider__range" type="range" value="0" min="-50" max="50">
-					</div>
-					<div class="concept">수수하게</div>
-					
-					<div class="concept">대중적으로</div>
-					<div class="slider-wrap">
-						<input id="concept4" class="range-slider__range" type="range" value="0" min="-50" max="50">
-					</div>
-					<div class="concept">고급스럽게</div>
-					
-					<div class="concept">복고적으로</div>
-					<div class="slider-wrap">
-						<input id="concept5" class="range-slider__range" type="range" value="0" min="-50" max="50">
-					</div>
-					<div class="concept">현대적으로</div>
-				</div>
-				
-				<div class="br" style="border-bottom: 2px solid gray"></div>
-				<div class="br"></div>
-				
-				<div class="leftLine">
-					3. 세부사항을 선택해주세요.
-				</div>
-				<div class="rightLine">
-					<b>마감일</b><br>
-					
-					<select id="optionDay" class="selectDate" onchange="selectDate()">
-						<option value="0">마감일</option>
-						<option value="1">1일</option>
-						<option value="2">2일</option>
-						<option value="3">3일</option>
-						<option value="4">4일</option>
-						<option value="5">5일</option>
-						<option value="6">6일</option>
-						<option value="7">7일</option>
-						<option value="8">8일</option>
-						<option value="9">9일</option>
-						<option value="10">10일</option>
-					</select>
-					<select id="optionHour" class="selectDate" onchange="selectDate()">
-						<option value="0">마감시간</option>
-						<option value="1">1시간</option>
-						<option value="2">2시간</option>
-						<option value="3">3시간</option>
-						<option value="4">4시간</option>
-						<option value="5">5시간</option>
-						<option value="6">6시간</option>
-						<option value="7">7시간</option>
-						<option value="8">8시간</option>
-						<option value="9">9시간</option>
-						<option value="10">10시간</option>
-						<option value="11">11시간</option>
-						<option value="12">12시간</option>
-					</select>
-					
-					기한 : <span id="month"></span>월 <span id="day"></span>일 <span id="hour"></span>시
-					<div class="br"></div>
-					
-					<script>
-						var dt = new Date();
-						$('#month').text(dt.getMonth() + 1)
-						$('#day').text(dt.getDate())
-						$('#hour').text(dt.getHours())
-						
-						function selectDate() {
-							dt = new Date();
-							
-							dt.setDate(dt.getDate() + 1);
-							console.log($('#optionDay option:selected').val())
-							/* dt.setDate(dt.getDate() + $('#optionDay option:selected').val()) */
-							/* dt.setHours(dt.setHours() + $('#optionHour option:selected').val()) */
-							
-							$('#month').text(dt.getMonth() + 1)
-							$('#day').text(dt.getDate())
-							$('#hour').text(dt.getHours())
-						}
-					</script>
-
-					<b>의뢰비</b><br>
-					<input id="inputText" type="text" value=""><br>
-					<div class="br"></div>
-					
-					<b>공개여부</b><br>
-					<label class="switch">
-					<input type="checkbox">
-					<span class="slider round"></span>
-					</label>
-					<p>&nbsp;공개</p><p style="display:none;">&nbsp;비공개</p>
-					
-					<script>
-						var check = $("input[type='checkbox']");
-						check.click(function(){
-							$("p").toggle();
-						});
-					</script>
-				</div>
-				
-				
-				
-				<br><br><br><br><br><br>
-				
-					<!-- 로고로 만들어서 제작 -->
+		<div id="main">
+			<div id="mainWrap">
+				<!-- 로고로 만들어서 제작 -->
 				<div id="logoImg">
 					<img src=''>
 				</div>
 				<div id="mainTitle">
-					자료 첨부파일
+					디자인 요청 상세 내용
 				</div>
 				
-				<br><input type="file">
-				<br><input type="file">
-				<br><input type="file">
-				<br><input type="file">
-				파일첨부도 더 이쁜걸로 수정<br>
-				
-				<div id="btnList">
-					<div id="submit" class="button">작성완료</div>
-					<div id="cancle" class="button">돌아가기</div>
-				</div>
-				
-				<script>
-					$('#submit').hover(function(){
-						$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
-					}, function(){
-						$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
-					});
-					$('#cancle').hover(function(){
-						$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
-					}, function(){
-						$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
-					})
+				<form id="writeForm">
+					<div class="leftLine">
+						1. 어떤 작품을 원하시나요?
+					</div>
+					<div class="rightLine">
+						<b>제목</b><br>
+						<input class="inputText" type="text"><br>
+						<div class="br"></div>
+						
+						<b>카테고리</b><br>
+						<select class="inputText">
+							<option value="로고 이미지">컨텐츠 제작</option>
+							<option value="편집 이미지">컨텐츠 수정</option>
+							<option value="기타 이미지">기타</option>
+						</select>
+						<br>
+						<!-- 카테고리박스 좀더 이쁘게 만들 궁리중<br> -->
+						<div class="br"></div>
+					</div>
 					
-					$('#submit').click(function(){
-						oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
-						console.log(document.getElementById("content").value);
+					<div class="leftLine">
+						2. 무엇을 디자인해드릴까요?
+					</div>
+					<div id="contentWrap">
+						<textarea name="content" id="content"></textarea>
+					</div>
+					<div class="br"></div>
+					
+					<script type="text/javascript">
+						var oEditors = [];
+						nhn.husky.EZCreator.createInIFrame({
+						 oAppRef: oEditors,
+						 elPlaceHolder: "content",
+						 sSkinURI: "../../se2/SmartEditor2Skin.html",
+						 fCreator: "createSEditor2"
+						});
+					</script>
+					
+					<div class="br" style="border-bottom: 2px solid gray"></div>
+					<div class="br"></div>
+					
+					<div class="leftLine">
+						3. 작품의 컨셉을 정해주세요.
+					</div>
+					<div class="rightLine">
+						<div class="concept">우아하게</div>
+						<div class="slider-wrap">
+							<input id="concept1" class="range-slider__range" type="range" value="0" min="-50" max="50">
+						</div>
+						<div class="concept">터프하게</div>
 						
+						<div class="concept">재미있게</div>
+						<div class="slider-wrap">
+							<input id="concept2" class="range-slider__range" type="range" value="0" min="-50" max="50">
+						</div>
+						<div class="concept">진지하게</div>
 						
-						console.log(document.getElementById("concept1").value);
-					})
-				</script>
-			</form>
+						<div class="concept">화려하게</div>
+						<div class="slider-wrap">
+							<input id="concept3" class="range-slider__range" type="range" value="0" min="-50" max="50">
+						</div>
+						<div class="concept">수수하게</div>
+						
+						<div class="concept">대중적으로</div>
+						<div class="slider-wrap">
+							<input id="concept4" class="range-slider__range" type="range" value="0" min="-50" max="50">
+						</div>
+						<div class="concept">고급스럽게</div>
+						
+						<div class="concept">복고적으로</div>
+						<div class="slider-wrap">
+							<input id="concept5" class="range-slider__range" type="range" value="0" min="-50" max="50">
+						</div>
+						<div class="concept">현대적으로</div>
+					</div>
+					
+					<div class="br" style="border-bottom: 2px solid gray"></div>
+					<div class="br"></div>
+					
+					<div class="leftLine">
+						4. 세부사항을 선택해주세요.
+					</div>
+					<div class="rightLine">
+						<b>마감일</b><br>
+						
+						<select id="optionDay" class="selectDate" onchange="selectDate()">
+							<option value="0">마감일</option>
+							<option value="1">1일</option>
+							<option value="2">2일</option>
+							<option value="3">3일</option>
+							<option value="4">4일</option>
+							<option value="5">5일</option>
+							<option value="6">6일</option>
+							<option value="7">7일</option>
+							<option value="8">8일</option>
+							<option value="9">9일</option>
+							<option value="10">10일</option>
+						</select>
+						<select id="optionHour" class="selectDate" onchange="selectDate()">
+							<option value="0">마감시간</option>
+							<option value="1">1시간</option>
+							<option value="2">2시간</option>
+							<option value="3">3시간</option>
+							<option value="4">4시간</option>
+							<option value="5">5시간</option>
+							<option value="6">6시간</option>
+							<option value="7">7시간</option>
+							<option value="8">8시간</option>
+							<option value="9">9시간</option>
+							<option value="10">10시간</option>
+							<option value="11">11시간</option>
+							<option value="12">12시간</option>
+						</select>
+						
+						기한 : <span id="month"></span>월 <span id="day"></span>일 <span id="hour"></span>시
+						<div class="br"></div>
+						
+						<script>
+							var dt = new Date();
+							$('#month').text(dt.getMonth() + 1)
+							$('#day').text(dt.getDate())
+							$('#hour').text(dt.getHours())
+							
+							function selectDate() {
+								dt = new Date();
+								
+								dt.setDate(dt.getDate() + 0);
+								/* dt.setDate(dt.getDate() + $('#optionDay option:selected').val()) */
+								dt.setHours(dt.getHours() + $('#optionHour option:selected').val())
+								
+								$('#month').text(dt.getMonth() + 1)
+								$('#day').text(dt.getDate())
+								$('#hour').text(dt.getHours())
+							}
+						</script>
+	
+						<b>의뢰비</b><br>
+						<input class="inputText" type="text" value=""><br>
+						<div class="br"></div>
+						
+						<b>공개여부</b><br>
+						<label class="switch">
+						<input type="checkbox">
+						<span class="slider round"></span>
+						</label>
+						<p>&nbsp;공개</p><p style="display:none;">&nbsp;비공개</p>
+						
+						<script>
+							var check = $("input[type='checkbox']");
+							check.click(function(){
+								$("p").toggle();
+							});
+						</script>
+					</div>
+					
+					<div class="br" style="border-bottom: 2px solid gray"></div>
+					<div class="br"></div>
+					
+					<div class="leftLine">
+						5. 참고할 첨부파일이 있으신가요?
+					</div>
+					<div class="rightLine">
+						<!-- <br> -->
+						<div id="fileList">
+							<!-- 5. 참고할 첨부파일이 있으신가요? 글씨 내려가는거랑 fileArea 상단에 공간 뜨는거 해결해야됨 -->
+							<%-- <div class="fileArea">
+								<img src="${ contextPath }/views/images/x-button.png" class="fileAreaRemove">
+								<img src='' class="fileAreaImg">
+								123.jpg
+							</div> --%>
+						</div>
+						<div id="fileAdd">
+							<img src="${ contextPath }/views/images/add.png">
+							<span>파일 추가</span>
+						</div>
+					</div>
+					
+					<script>
+						var fileNum = 0;
+						$('#fileAdd').click(function(){
+							$('#fileList').append("<input type='file' hidden='' onchange='changeFile(this)' id='fileNum" + fileNum + "' name='fileNum" + fileNum + "'>");
+							$('#fileNum' + fileNum).click();
+							fileNum++;
+						});
+						
+						function changeFile(file) {
+							var fileValue = file.value;
+							var fileUrl = fileValue.lastIndexOf("\\") + 1;
+							var fileName = fileValue.substring(fileUrl);
+							
+							if(fileValue != "") {
+								var $div = $('<div class="fileArea">');
+								var $img1 = $('<img class="fileAreaRemove">');
+								var $img2 = $('<img class="fileAreaImg">');
+								
+								$img1.attr("src", "${ contextPath }/views/images/x-button.png");
+								
+								var reader = new FileReader();
+								
+								reader.onload = function(e){
+									$img2.attr("src", e.target.result);
+								}
+								
+								reader.readAsDataURL(file.files[0]);
+								
+								$div.append($img1);
+								$div.append($img2);
+								$div.append(fileName);
+								
+								$('#fileList').append($div);
+							}
+							
+							/* stringByteLength = fileName.replace(/[\0-\x7f]|([0-\u07ff]|(.))/g,"$&$1$2").length;
+							console.log(stringByteLength + " Bytes"); 길이 길어지면 ...으로 표시할 방법 찾는 중*/
+						}
+						
+						$(document).on("click", ".fileAreaRemove", function(){
+							this.parentNode.remove();
+						});
+					</script>
+					
+					<div class="br" style="border-bottom: 2px solid gray"></div>
+					
+					<div id="btnList">
+						<div id="submit" class="button">작성완료</div>
+						<div id="cancle" class="button">돌아가기</div>
+					</div>
+					
+					<script>
+						$('#submit').hover(function(){
+							$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
+						}, function(){
+							$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
+						});
+						$('#cancle').hover(function(){
+							$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
+						}, function(){
+							$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
+						})
+						
+						$('#submit').click(function(){
+							oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
+							console.log(document.getElementById("content").value);
+							
+							
+							console.log(document.getElementById("concept1").value);
+						})
+					</script>
+				</form>
+			</div>
 		</div>
 		
 		<!-- 공용영역 -->

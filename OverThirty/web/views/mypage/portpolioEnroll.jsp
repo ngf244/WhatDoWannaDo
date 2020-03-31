@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <style>
-	.portpolioUpdate{
+	.portpolioEnroll{
 		border: 1px solid black;
 	}
 
-	.portpolioUpdateTopArea{height: 100px; background: #4374D9; color: white; font-size: 25pt; box-shadow: 2px 2px 5px black;}
+	.portpolioEnrollTopArea{height: 100px; background: #4374D9; color: white; font-size: 25pt; box-shadow: 2px 2px 5px black;}
 	
-	#portpolioUpdateText{font-weight: bolder; margin-top: 25px; padding-left: 40px; padding-right: 30px; display:inline-block;}
+	#portpolioEnrollText{font-weight: bolder; margin-top: 25px; padding-left: 40px; padding-right: 30px; display:inline-block;}
 	
 	#porThumbnail{
 		width: 30%;
@@ -34,8 +34,12 @@
 		font-size: 14pt;
 	}
 	
-	#portUpdateTable{
+	#portEnrollTable{
 		line-height: 40px;
+	}
+	
+	.inputText{
+		
 	}
 	
 	.btnArea{
@@ -78,20 +82,20 @@
 			
 		</div>
 		<div id="main">
-			<div class="portpolioUpdate">
-				<div class="portpolioUpdateTopArea">
-					<div id="portpolioUpdateText">포트폴리오 수정</div>
+			<div class="portpolioEnroll">
+				<div class="portpolioEnrollTopArea">
+					<div id="portpolioEnrollText">포트폴리오 등록</div>
 				</div>
-				<div id="portpolioUpdateContent">
+				<div id="portpolioEnrollContent">
 					<form action="">
 						<div id="porThumbnail">
 							썸네일 이미지 등록
 						</div>
 						<div id="porFormArea">
-							<table id="portUpdateTable">
+							<table id="portEnrollTable">
 								<tr>
 									<td style="width: 35%;">포트폴리오 제목</td>
-									<td style="width: 45%;"><input type="text" name="portpolioName" size="60"></td>
+									<td style="width: 45%;"><input type="text" name="portpolioName" class="inputText" size="60"></td>
 								</tr>
 								<tr>
 									<td>포트폴리오 유형</td>
@@ -120,6 +124,10 @@
 								<tr>
 									<td>파일 첨부</td>
 									<td>
+										<input type="file" name="portpolioFile">
+										<input type="file" name="portpolioFile">
+										<input type="file" name="portpolioFile">
+										<input type="file" name="portpolioFile">
 										<input type="file" name="portpolioFile">
 									</td>
 								</tr>

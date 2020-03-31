@@ -33,12 +33,14 @@
         margin-right: auto;
 		margin-bottom: 30px;
     }
-
+    .userListArea{
+        float: left;
+        width: 48%;
+        min-height: 300px;
+        margin-left: 10px;
+    }
 	.userListLetter{
-		width: 48%;
-		float: left;
-		margin-left: 2.5%;
-		margin-right: 1%;
+		width: 100%;
 		margin-bottom: 30px;
 		height: 40px;
         background-color: rgb(52, 152, 219);
@@ -48,21 +50,30 @@
 	}
 
 	.userList{
-		width: 48%;
-		float: left;
-		margin-left: 2.5%;
-		margin-right: 1%;
+		width: 100%;
 		margin-bottom: 30px;
 		height: 400px;
 	}
 
+    .banArea{
+        float: left;
+        width: 48%;
+        min-height: 300px;
+        margin-left: 20px;
+    }
+
 	.banWord{
-		width: 45%;
-		float: left;
+		width: 100%;
 		margin: auto;
-		height: 500px;
 		margin-bottom: 30px;
+        text-align: center;
+        height: 40px;
 	}
+
+    .banWrite{
+        width: 100%;
+        height: 100px;
+    }
 
     table{
         width: 100%;
@@ -102,12 +113,16 @@
                         </tr>
                     </table>
                 </div>
-				<div class="userListLetter">유저 리스트</div>
-				<div class="banWord" style="background-color: darkgreen;"></div>
-				<div class="userList" style="background-color: blueviolet;"></div>
-				<div class="sectionafter" style="background-color: darkgreen;"></div>
+                <div class="userListArea">
+                    <div class="userListLetter">유저 리스트</div>
+                    <div class="userList" style="background-color: blueviolet;"></div>
+                </div>
+                <div class="banArea">
+                    <div class="banWord" style="background-color: darkgreen;">밴할거</div>
+                    <div class="banWrite" style="background-color: brown;"></div>
+                </div>
+                <div class="sectionafter"></div>
             </div>
-			왓더
 		</div>
         <div id="right-side" style="background: blue">
             

@@ -215,7 +215,7 @@
 			<div class="menubar">가이드</div>
 			<div class="menubar">사진</div>
 			<div class="menubar">미디어</div>
-			<div class="menubar">HIT 갤러리</div>
+			<div class="menubar">뽀인트 샵</div>
 			<div class="menubar">문의</div>
 			<div class="menubar">충전소</div>
 		</div>

@@ -12,35 +12,6 @@ link href ="https: //fonts.googleapis.com /css?family=Noto+Sans+KR
 	min-height: 600px;
 }
 
-#left-side {
-	float: left;
-	width: 12%;
-	display: inline-block;
-	min-height: 600px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin: auto;
-}
-
-#main {
-	width: 70%;
-	display: inline-block;
-	min-height: 600px;
-	/* margin-bottom: 20px; */
-	margin: auto;
-
-	/* border: 1px solid black; */
-}
-
-#right-side {
-	float: right;
-	width: 16.5%;
-	min-height: 600px;
-	display: inline-block;
-	margin-bottom: 20px;
-	margin: auto;
-}
-
 #slideBar {
 	margin-top: 50px;
 	width: 100%;

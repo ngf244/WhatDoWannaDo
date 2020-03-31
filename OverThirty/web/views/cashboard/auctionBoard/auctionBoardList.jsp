@@ -12,34 +12,6 @@ link href ="https: //fonts.googleapis.com /css?family=Noto+Sans+KR
 	min-height: 600px;
 }
 
-#left-side {
-	float: left;
-	width: 12%;
-	display: inline-block;
-	min-height: 600px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin: auto;
-}
-
-#main {
-	width: 70%;
-	display: inline-block;
-	min-height: 600px;
-	/* margin-bottom: 20px; */
-	margin: auto;
-
-	/* border: 1px solid black; */
-}
-
-#right-side {
-	float: right;
-	width: 16.5%;
-	min-height: 600px;
-	display: inline-block;
-	margin-bottom: 20px;
-	margin: auto;
-}
 
 #slideBar {
 	margin-top: 50px;
@@ -391,15 +363,15 @@ link href ="https: //fonts.googleapis.com /css?family=Noto+Sans+KR
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="../../common/mainHeader.jsp" />
-	<section>
+	<%-- <jsp:include page="../../common/mainHeader.jsp" />
+	<section> --%>
 		<div id="content">
-			<div id="left-side" style="background-color: yellow;">
+			<!-- <div id="left-side" style="background-color: yellow;">
 				<div>왼쪽 영역</div>
-			</div>
+			</div> -->
 
 			<!-- 공용영역 -->
-			<div id="main" style="background: white;">
+			<div style="background: white;">
 				<div class="mainBackground">
 					<div id="randomThumbnailForm">
 						1:1에 참여하세요
@@ -600,11 +572,11 @@ link href ="https: //fonts.googleapis.com /css?family=Noto+Sans+KR
 		</div>
 
 		<!-- 공용영역 -->
-		<div id="right-side" style="background: blue">
+		<!-- <div id="right-side" style="background: blue">
 			<div>오른쪽 영역</div>
-		</div>
-	</section>
-	<jsp:include page="../../common/footer.jsp" />
+		</div> -->
+	<%-- </section>
+	<jsp:include page="../../common/footer.jsp" /> --%>
 
 
 

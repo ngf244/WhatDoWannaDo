@@ -4,12 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
 <style>
 	/* 마이페이지 메인 상단 프로필 부분 */
-	#mypageArea{width: 100%; height: 3900px; text-align: left;}
+	#mypageArea{width: 100%; text-align: left;}
 	.mypageTopArea{height: 100px; background: #4374D9; color: white; font-size: 25pt; box-shadow: 2px 2px 5px black;}
-	#mypageText{font-weight: bolder; margin-top: 25px; padding-left: 40px; padding-right: 30px; display:inline-block;}
-	.requestBtn{
+	#mypageText{font-weight: bolder; margin-top: 25px; padding-left: 40px; padding-right: 30px; display:inline-block; float: left;}
+/* 	.requestBtn{
 		width: 100px; 
 		height: 30px; 
 		margin-top: 20px; 
@@ -24,7 +25,115 @@
 		border-radius: 10px;
 		box-shadow: 2px 2px 5px black;
 		cursor: pointer;
+	} */
+	
+	/* 의뢰 요청 버튼 */
+	button {
+	  position: relative;
+	  background: none;
+	  cursor: pointer;
+	  border: 0;
+	  padding: 0;
+	  outline: 0;
+	  font-family: 'Chewy', cursive;
+	  color: crimson;
+	  width: 250px;
 	}
+	span {
+	  display: block;
+	}
+	.shadow:before,
+	.shadow:after {
+	  content: '';
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  border-radius: 100px;
+	  background: red;
+	  z-index: -1;
+	  background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+	  opacity: .4;
+	  transform: rotateX(0);
+	  transform-origin: center 30px;
+	  filter: blur(1px);
+	  animation: shadowLeft 2s ease-in-out alternate infinite;
+	  transition: all 1s cubic-bezier(0.875, -0.555, 0.190, 1.640);
+	}
+	@keyframes shadowLeft {
+	  to {
+	    opacity: .1;
+	    filter: blur(5px);
+	  }
+	}
+	.shadow:after {
+	  background: linear-gradient(to left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+	  opacity: .1;
+	  filter: blur(5px);
+	  animation: shadowRight 2s ease-in-out alternate infinite;
+	}
+	@keyframes shadowRight {
+	  to {
+	    opacity: .4;
+	    filter: blur(1px);
+	  }
+	}
+	#reqGifBtn:focus .shadow:before,
+	#reqGifBtn:focus .shadow:after {
+	  transform: rotateX(180deg);
+	}
+	
+	
+	.vert {
+	  transform: translateY(-20px);
+	  animation: vert 1s ease-in-out alternate infinite;
+	}
+	@keyframes vert {
+	  to {
+	    transform: translateY(-25px);
+	  }
+	}
+	.floating {
+	  background-color: transparent;
+	  -webkit-perspective: 800;
+	  -webkit-transform-style: preserve-3d;
+	  transform: rotateY(-3deg) skewY(-3deg);
+	  animation: swing 2s cubic-bezier(0.420, 0.000, 0.580, 1.000) alternate infinite;
+	}
+	@keyframes swing {
+	  to {
+	    transform: rotateY(3deg) skewY(3deg);
+	  }
+	}
+	.floating span {
+	  display: block;
+	  padding: 10px 0;
+	  border-radius: 100px;
+	  font-size: 30px;
+	  background: #fff;
+	  transition: all 1s cubic-bezier(0.875, -0.555, 0.190, 1.640);
+	  transform: translateY(-3px) translateZ(5px) rotateX(0);
+	  width: 100%;
+	}
+	span.back {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  background: #aaa;
+	  transform: translateY(3px) translateZ(-5px) rotateX(-180deg);
+	}
+	#reqGifBtn:focus .front {
+	  transform: translateY(3px) translateZ(-5px) rotateX(180deg);
+	  background: #aaa;
+	}
+	
+	#reqGifBtn:focus .back {
+	  transform: translateY(-3px) translateZ(5px) rotateX(0);
+	  background: #fff;
+	}	
+	#reqGifBtn{width: 200px; margin-left: 800px; margin-top: 40px;}	
+	
 	
 	/* 회원 정보 영역 */
 	.myprofileArea{height: 400px; border: 1px solid black; margin-top: 30px;}
@@ -128,8 +237,8 @@
 	
 	/* 현재 포인트&캐쉬 */
 	.point-cash-area{height: 120px; margin-top: 30px;}
-	.point{width: 47%; height: 120px; border: 1px solid black; display: inline-block;}
-	.cash{width: 47%; height: 120px; border: 1px solid black; display: inline-block; margin-left: 30px;}
+	.point{width: 47%; height: 120px; border: 1px solid black; display: inline-block; border-radius: 5px;}
+	.cash{width: 47%; height: 120px; border: 1px solid black; display: inline-block; margin-left: 30px; border-radius: 5px;}
 	.point>table{
 		width: 85%;
 		height: 80%;
@@ -149,9 +258,9 @@
 	}
 	
 	/* 내 글 관리 부분 */
-	#mypostManagement{height: 800px; border: 1px solid black; margin-top: 30px;}
+	#mypostManagement{height: 830px; margin-top: 30px;}
 	.mypostText{height: 70px; border: 1px solid black; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #D5D5D5;}
-	.mypostArea{height: 700px; border: 1px solid black; margin-top: 30px;}
+	.mypostArea{height: 700px; margin-top: 30px;}
 	.mypostArea>div>span{font-size: 14pt; margin-left: 20px; font-weight: bold;}
 	#replyText{font-size: 14pt; margin-left: 20px; font-weight: bold;}
 	.pointArea{
@@ -172,13 +281,14 @@
 		width: 100%;
 		height: 300px;
 		border: 1px solid black;
+		margin-top: 25px;
 	}
 	.postList{line-height: 45px; padding: 15px; padding-left: 30px;}
-	.replayList1{width: 45%; border: 1px solid black; line-height: 45px; padding: 15px; padding-left: 30px; float: left; margin-right: 36px;}
-	.replayList2{width: 45%; border: 1px solid black; line-height: 45px; padding: 15px; padding-left: 30px; float: left;}
+	.replayList1{width: 45%; line-height: 45px; padding: 15px; padding-left: 30px; float: left; margin-right: 36px;}
+	.replayList2{width: 45%; line-height: 45px; padding: 15px; padding-left: 30px; float: left;}
 	
 	/* 나의 의뢰/작업 현황 */
-	#myReqWorkState{height: 810px; border: 1px solid black; margin-top: 30px;}
+	#myReqWorkState{height: 810px; margin-top: 30px;}
 	.myReqWorkStateText{height: 70px; border: 1px solid black; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #D5D5D5;}
 	#allReqListBtn{
 		float: right; 
@@ -211,20 +321,61 @@
 	.innerArea + span{font-size: 10pt;}
 	
 	/* 포트폴리오 */
-	#portpolio{height: 800px; border: 1px solid black; margin-top: 30px;}
+	#portpolio{height: 865px; margin-top: 30px;}
 	.portpolioText{height: 70px; border: 1px solid black; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #D5D5D5;}
-	.portpolioArea{height: 700px; border: 1px solid black; margin-top: 30px;}
+	.portpolioArea{height: 765px; border: 1px solid black; margin-top: 30px;}
 	#smallReqBtn{font-size: 14pt; color: white; background: rgb(231, 76, 60); display: inline-block; margin-left: 50px; padding-left: 30px; padding-right: 30px; padding-bottom: 20px; border-radius: 10px; height: 45px; cursor: pointer;}
 	.portpolioList{width: 20%; height: 250px; border: 1px solid black; float: left; margin-left: 50px; margin-top: 30px;}
-	.portpolioPagingArea{width: 50%; height: 70px; border: 1px solid black; margin-left: 325px; margin-top: 40px; float: left;}
-	#portpolioEnrollBtn{margin-top: 40px; margin-left: 150px; font-size: 14pt; background: rgb(231, 76, 60); color: white; font-weight: bolder; padding: 15px; border-radius: 10px; float: left; cursor: pointer;}
+	
+	/* 페이징 처리 css */
+	.pagingCenter{
+		text-align: center;
+		margin-top: 30px;
+	}
+	
+	.pagination{
+		display: inline-block;
+	}
+
+	.pagination a {
+	  color: black;
+	  float: left;
+	  padding: 8px 16px;
+	  text-decoration: none;
+	  transition: background-color .3s;
+	  border: 1px solid #ddd;
+	}
+	
+	.pagination a.active {
+	  background-color: rgb(52, 152, 219);
+	  color: white;
+	  border: 1px solid rgb(52, 152, 219);
+	}
+	
+	.pagination a:hover:not(.active) {background-color: #ddd;}
+	
+	/* 포트폴리오 등록 버튼 */
+	#portpolioEnrollBtn{
+		display: inline-table;
+		width: 20%;
+		height: 60px;
+		margin: 20px;
+		margin-top: 40px;
+		line-height: 60px;
+		text-align: center;
+		background-color: rgb(39, 174, 96);
+		color: white;
+		border-radius: 5px;
+		cursor: pointer;
+		float: right;
+	}	
 	
 	/* 캐쉬변동 */
-	#cashChange{height: 700px; border: 1px solid black; margin-top: 30px;}
+	#cashChange{height: 700px; margin-top: 30px;}
 	.cashChangeText{height: 70px; border: 1px solid black; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #D5D5D5;}
 	.cashChangeArea{height: 600px; border: 1px solid black; margin-top: 30px;}
 	.monthArea{width: 18%; height: 75px; border: 1px solid silver; border-radius: 100px; margin: 15px; margin-left: 540px; text-align: center; line-height: 70px;}
-	.changeList{width: 90%; height: 155px; border: 1px solid silver; margin-left: 60px;}
+	.changeList{width: 90%; height: 155px; margin-left: 60px; border-bottom: 1px solid silver;}
 	.changeClass1{height: 80%; width: 10%; border: 1px solid red; margin: 10px; border-radius: 100px; line-height: 120px; color: red; float: left;}
 	.changeClass2{height: 80%; width: 10%; border: 1px solid green; margin: 10px; border-radius: 100px; line-height: 120px; color: green; float: left;}
 	.changeClass3{height: 80%; width: 10%; border: 1px solid rgb(41, 128, 185); margin: 10px; border-radius: 100px; line-height: 120px; color: rgb(41, 128, 185); float: left;}
@@ -245,7 +396,17 @@
 			<div id="mypageArea">
 				<div class="mypageTopArea">
 					<div id="mypageText">마이페이지</div>
-					<div class="requestBtn"><b>의뢰 요청</b></div>
+					<!-- <div class="requestBtn"><b>의뢰 요청</b></div> -->
+					<button id="reqGifBtn">
+					  <span class="shadow">
+					    <span class="vert">
+					      <span class="floating">
+					        <span class="front">Request</span>
+					        <span class="back">Request</span>
+					      </span>
+					    </span>
+					  </span>
+					</button>
 					<div style="clear: both;"></div>		
 				</div>
 				
@@ -254,8 +415,8 @@
 						<div class="profileImage">
 							<img class="profile" src="${ contextPath }/views/images/default_profile.png">
 						</div>
-						<button id="profileEditBtn">프로필 수정</button>
-						<div id="userId">user01</div><span>님</span>
+						<button id="profileEditBtn" style="width: 120px; margin-left: 180px;">프로필 수정</button>
+						<span id="userId">user01</span><span style="display: inline-block;">님</span>
 						<div id="normalInfoArea">
 							<table id="userInfoTable">
 								<tr>
@@ -320,8 +481,8 @@
 					
 					<div class="mypostArea">
 						<div class="pointArea">
-							<span>포인트 게시글</span>
-							<img class="plusIcon" width="40" height="40" src="../images/plus_icon2.png"/>
+							<span style="display: inline-block;">포인트 게시글</span>
+							<img class="plusIcon" width="40" height="40" src="../images/plus_icon2.png" style="display: inline-block;"/>
 							<div class="postList">
 								<div>- 게시글 제목</div>
 								<div>- 게시글 제목</div>
@@ -333,8 +494,8 @@
 							</div>
 						</div>
 						<div class="cashArea">
-							<span>캐쉬 게시글</span>
-							<img class="plusIcon" width="40" height="40" src="../images/plus_icon2.png"/>
+							<span style="display: inline-block;">캐쉬 게시글</span>
+							<img class="plusIcon" width="40" height="40" src="../images/plus_icon2.png" style="display: inline-block;"/>
 							<div class="postList">
 								<div>- 게시글 제목</div>
 								<div>- 게시글 제목</div>
@@ -443,10 +604,22 @@
 						<div class="portpolioList"></div>
 						<div class="portpolioList"></div>
 						<div style="clear: both;"></div>
-						<div class="portpolioPagingArea">
-							페이징 영역
+						<div class="pagingCenter">
+							<div class="pagination">
+							<a href=""> &laquo; </a>
+							<a href="" class="active"> 1 </a>
+							<a href=""> 2 </a>
+							<a href=""> 3 </a>
+							<a href=""> 4 </a>
+							<a href=""> 5 </a>
+							<a href=""> 6 </a>
+							<a href=""> 7 </a>
+							<a href=""> 8 </a>
+							<a href=""> &raquo; </a>
+							</div>
 						</div>
-						<div id="portpolioEnrollBtn">등록하기</div>						
+						<div id="portpolioEnrollBtn">등록하기</div>
+						<div style="clear: both;"></div>						
 					</div>
 				</div>
 				<!-- 캐쉬 변동 내역 -->
@@ -540,8 +713,8 @@
 						</div>
 					</div>
 					<hr>
-					<div id="editCompleteBtn" onClick="closeModal();">수정완료</div>
-					<div id="editCancelBtn" onClick="closeModal();">수정취소</div>
+					<div id="editCompleteBtn" onClick="closeModal();">완료</div>
+					<div id="editCancelBtn" onClick="closeModal();">취소</div>
 					<div style="clear: both;"></div>
 				</div>
 			</div>				

@@ -37,12 +37,12 @@
 		function scroll_follow(id){
   			$(window).scroll(function(){  //스크롤이 움직일때마다 이벤트 발생
       			var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환
-      			$(id).stop().animate({top:310+position+"px"}, 500); //해당 오브젝트 위치값 재설정
+      			$(id).stop().animate({top:290+position+"px"}, 500); //해당 오브젝트 위치값 재설정
    			});
 		}
  			scroll_follow("#scroll");
 	</script> 
-	<div id="scroll" style="position:absolute; top:310px; left: 30px;"> 
+	<div id="scroll" style="position:absolute; top:290px; left: 30px;"> 
 		<span>마이페이지 메뉴</span>
 		<table>
 			<tr><td style="border-bottom: 1px solid white; border-top: 1px solid white;"><a href="#mypageArea">최상단으로</a></td></tr> 

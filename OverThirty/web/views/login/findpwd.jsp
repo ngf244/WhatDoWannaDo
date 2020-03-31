@@ -12,11 +12,12 @@
 	
 	margin-top: 80px;
 	text-align:center;
+	border-bottom: 5px solid #A9BCF5;
 	
 	}
 	
 	.findPwdForm{
-	margin-top: 100px;
+	margin-top: 80px;
 	text-align: center;
 	}
 	
@@ -50,7 +51,8 @@
 	
 	margin-top: 30px;
 	text-align: center;
-	height: 70px; 	
+	height: 70px; 
+		
 	
 	}
 	
@@ -133,8 +135,4 @@
 	   </div>
 	  </div>
 	 </div>
-	</div>
-   </div>
-  </div>
- </div>
 </html>

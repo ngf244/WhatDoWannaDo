@@ -3,13 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
 <title>로그인</title>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 <style>
    .loginTitle{
    margin-top: 60px;
    text-align: center;
-   border-bottom: 4px solid #A9BCF5;
+   border-bottom: 5px solid #A9BCF5;
    }
    
    #logo{
@@ -75,6 +78,8 @@
 </style>
 </head>
 <body>
+<a id="kakao-login-btn"></a>
+<a href="http://developers.kakao.com/logout"></a>
    
       <div class="loginTitle">
          <img src="<%= request.getContextPath() %>/sources/image/logintitle.png" id="logo">

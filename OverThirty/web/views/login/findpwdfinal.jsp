@@ -7,66 +7,78 @@
 <title>비밀번호찾기</title>
 <style>
 
-	.finalPwd{
-	margin-top: 90px;
+	.idtitle{
+	margin-top: 100px;
 	text-align: center;
-	height: auto; width: 100%; border: 1px solid black;
 	height: 70px; 	
+	border-bottom: 5px solid #A9BCF5;
+	
+	}
+	
+	.title{
+	
+	text-align:center;
+	
+	}
+	
+	.finalPwd{
+	
+	margin-top: 50px;
+	text-align: center;
+	
+	}
+	
+	.inputForm{
+	
+	margin-top: 10px;
+    width: 37%;
+  	height: 50px;
+   	font-size: 20px;
+	
 	}
 
-	.finalPwdform{
-	
-	margin-top: 100px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid red;
-	height: 70px;
-	background: red;
-	color: white;
-	
-	}
-	
-	.NfinalPwdform{
-	
-	margin-top: 100px;
-	text-align: center;
-	height: auto; width: 100%; border: 1px solid pink;
-	height: 70px;
-	background: pink;
-	color: white;
-	
-	}
-	
-	
 	.finalPwdbutton{
-	
-	margin-top: 100px;
+	margin-top: 30px;
 	text-align: center;
-	height: auto; width: 100%; border: 1px solid blue;
-	height: 70px;
-	background: blue;
-	color: white;
+	}
+	
+	#changebutton{
+	width: 37%;
+  	height: 50px;
+   	font-size: 20px;
+   	background: skyblue;
+   	color: white;
 	
 	}
 
 </style>
-
-
 </head>
 <body>
-	<div class="finalPwd">변경된 비밀번호 입력
+	<div class="idtitle">
+		<h1>현재 아이디 : HellowWorld <%  %> </h1>
+		</div>
 	
 	
-	<div class="finalPwdform">새비밀번호 form
+		<div class="title">
+			<h5>변경할 새로운 비밀번호를 설정해주세요</h5>
+			<h5>변경후 변경된 비밀번호로 로그인 가능합니다</h5>
+		</div>
+		
+		
+		
+		
+		
+		
+		<div class="finalPwd">
+			 <input type="text" id="" name="changepwd" class="inputForm" placeholder="새 비밀번호 입력" > <br>
+		 		 <input type="text" id="" name="changepwd" class="inputForm" placeholder="비밀번호 확인" >
+					</div>
 	
 	
-	<div class="NfinalPwdform">새비밀번호 확인란 form
+						<div class="finalPwdbutton">
+							<button type="button" id="changebutton">확인</button>
+								</div>
 	
 	
-	<div class="finalPwdbutton">버튼</div>
-	
-	
-	  </div>
-	 </div>
-	</div>
 </body>
 </html>

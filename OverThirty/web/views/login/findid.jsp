@@ -12,11 +12,12 @@
 	margin-top: 150px;
 	text-align: center;
 	color: black;
+	border-bottom: 4px solid #A9BCF5; 
 	
 	}
 
    .nameform{
-   margin-top: 70px;
+   margin-top: 30px;
    width: 37%;
    height: 50px;
    font-size: 20px;
@@ -42,6 +43,11 @@
 	
 	}
 	
+	.findidinfo{
+	
+	margin-top: 20px;
+	text-align:center;
+	}
 
 </style>
 </head>
@@ -51,6 +57,11 @@
 		<h3>아이디 찾기</h3>
 		</div>
 		
+			<div class="findidinfo">
+				<h3><li>회원가입시 입력한 이름과 이메일 정보를 입력해 주시기 바립니다.</li></h3>
+				<h4><li>정보를 입력하실때 정확하게 입력해주세요</li></h4>
+				<h4><li>정보가 정확하지 않으면 찾기에 어려움이 있습니다</li></h4>
+					</div>
 	
 	
 		<div class="findform">

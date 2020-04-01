@@ -41,6 +41,7 @@
 	.leftLine {
 		display: inline-table;
 		width: 35%;
+		height: 100%;
 		min-height: 50px;
 		font-size: 15pt;
 		text-align: center;
@@ -54,6 +55,11 @@
 		min-height: 50px;
 		font-size: 14pt;
 		line-height: 50px;
+		
+		float: right;
+	}
+	.fullLine {
+		
 	}
 	.br {
 		margin-top: 20px;
@@ -97,6 +103,7 @@
 		margin-right: 20px;
 	}
 	.fileArea {
+		position: relative;
 		display: inline-table;
 		width: 150px;
 		margin: 5px;
@@ -109,6 +116,13 @@
 		margin-bottom: 15px;
 		border-radius: 5px;
 	}
+	.fileArea p {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 140px;
+		height: 25px;
+	}
 	.fileAreaImg {
 		width: 140px;
 		height: 140px;
@@ -118,8 +132,8 @@
 		width: 20px;
 		height: 20px;
 		float: right;
-		position: relative;
-		top: 30px;
+		position: absolute;
+		top: 10px;
 		right: 10px;
 		z-index: 1;
 		cursor: pointer;
@@ -351,6 +365,7 @@
 						<!-- 카테고리박스 좀더 이쁘게 만들 궁리중<br> -->
 						<div class="br"></div>
 					</div>
+					<div class="sectionafter"></div>
 					
 					<div class="leftLine">
 						2. 무엇을 디자인해드릴까요?
@@ -373,185 +388,189 @@
 					<div class="br" style="border-bottom: 2px solid gray"></div>
 					<div class="br"></div>
 					
-					<div class="leftLine">
-						3. 작품의 컨셉을 정해주세요.
-					</div>
-					<div class="rightLine">
-						<div class="concept">우아하게</div>
-						<div class="slider-wrap">
-							<input id="concept1" class="range-slider__range" type="range" value="0" min="-50" max="50">
+					<div class="fullLine">
+						<div class="leftLine">
+							3. 작품의 컨셉을 정해주세요.
 						</div>
-						<div class="concept">터프하게</div>
-						
-						<div class="concept">재미있게</div>
-						<div class="slider-wrap">
-							<input id="concept2" class="range-slider__range" type="range" value="0" min="-50" max="50">
+						<div class="rightLine">
+							<div class="concept">우아하게</div>
+							<div class="slider-wrap">
+								<input id="concept1" class="range-slider__range" type="range" value="0" min="-50" max="50">
+							</div>
+							<div class="concept">터프하게</div>
+							
+							<div class="concept">재미있게</div>
+							<div class="slider-wrap">
+								<input id="concept2" class="range-slider__range" type="range" value="0" min="-50" max="50">
+							</div>
+							<div class="concept">진지하게</div>
+							
+							<div class="concept">화려하게</div>
+							<div class="slider-wrap">
+								<input id="concept3" class="range-slider__range" type="range" value="0" min="-50" max="50">
+							</div>
+							<div class="concept">수수하게</div>
+							
+							<div class="concept">대중적으로</div>
+							<div class="slider-wrap">
+								<input id="concept4" class="range-slider__range" type="range" value="0" min="-50" max="50">
+							</div>
+							<div class="concept">고급스럽게</div>
+							
+							<div class="concept">복고적으로</div>
+							<div class="slider-wrap">
+								<input id="concept5" class="range-slider__range" type="range" value="0" min="-50" max="50">
+							</div>
+							<div class="concept">현대적으로</div>
 						</div>
-						<div class="concept">진지하게</div>
-						
-						<div class="concept">화려하게</div>
-						<div class="slider-wrap">
-							<input id="concept3" class="range-slider__range" type="range" value="0" min="-50" max="50">
-						</div>
-						<div class="concept">수수하게</div>
-						
-						<div class="concept">대중적으로</div>
-						<div class="slider-wrap">
-							<input id="concept4" class="range-slider__range" type="range" value="0" min="-50" max="50">
-						</div>
-						<div class="concept">고급스럽게</div>
-						
-						<div class="concept">복고적으로</div>
-						<div class="slider-wrap">
-							<input id="concept5" class="range-slider__range" type="range" value="0" min="-50" max="50">
-						</div>
-						<div class="concept">현대적으로</div>
+						<div class="sectionafter"></div>
 					</div>
 					
 					<div class="br" style="border-bottom: 2px solid gray"></div>
 					<div class="br"></div>
 					
-					<div class="leftLine">
-						4. 세부사항을 선택해주세요.
-					</div>
-					<div class="rightLine">
-						<b>마감일</b><br>
-						
-						<select id="optionDay" class="selectDate" onchange="selectDate()">
-							<option value="0">마감일</option>
-							<option value="1">1일</option>
-							<option value="2">2일</option>
-							<option value="3">3일</option>
-							<option value="4">4일</option>
-							<option value="5">5일</option>
-							<option value="6">6일</option>
-							<option value="7">7일</option>
-							<option value="8">8일</option>
-							<option value="9">9일</option>
-							<option value="10">10일</option>
-						</select>
-						<select id="optionHour" class="selectDate" onchange="selectDate()">
-							<option value="0">마감시간</option>
-							<option value="1">1시간</option>
-							<option value="2">2시간</option>
-							<option value="3">3시간</option>
-							<option value="4">4시간</option>
-							<option value="5">5시간</option>
-							<option value="6">6시간</option>
-							<option value="7">7시간</option>
-							<option value="8">8시간</option>
-							<option value="9">9시간</option>
-							<option value="10">10시간</option>
-							<option value="11">11시간</option>
-							<option value="12">12시간</option>
-						</select>
-						
-						기한 : <span id="month"></span>월 <span id="day"></span>일 <span id="hour"></span>시
-						<div class="br"></div>
-						
-						<script>
-							var dt = new Date();
-							$('#month').text(dt.getMonth() + 1)
-							$('#day').text(dt.getDate())
-							$('#hour').text(dt.getHours())
+					<div class="fullLine">
+						<div class="leftLine">
+							4. 세부사항을 선택해주세요.
+						</div>
+						<div class="rightLine">
+							<b>마감일</b><br>
 							
-							function selectDate() {
-								dt = new Date();
-								
-								dt.setDate(dt.getDate() + 0);
-								/* dt.setDate(dt.getDate() + $('#optionDay option:selected').val()) */
-								dt.setHours(dt.getHours() + $('#optionHour option:selected').val())
-								
+							<select id="optionDay" class="selectDate" onchange="selectDate()">
+								<option value="0">마감일</option>
+								<option value="1">1일</option>
+								<option value="2">2일</option>
+								<option value="3">3일</option>
+								<option value="4">4일</option>
+								<option value="5">5일</option>
+								<option value="6">6일</option>
+								<option value="7">7일</option>
+								<option value="8">8일</option>
+								<option value="9">9일</option>
+								<option value="10">10일</option>
+							</select>
+							<select id="optionHour" class="selectDate" onchange="selectDate()">
+								<option value="0">마감시간</option>
+								<option value="1">1시간</option>
+								<option value="2">2시간</option>
+								<option value="3">3시간</option>
+								<option value="4">4시간</option>
+								<option value="5">5시간</option>
+								<option value="6">6시간</option>
+								<option value="7">7시간</option>
+								<option value="8">8시간</option>
+								<option value="9">9시간</option>
+								<option value="10">10시간</option>
+								<option value="11">11시간</option>
+								<option value="12">12시간</option>
+							</select>
+							
+							기한 : <span id="month"></span>월 <span id="day"></span>일 <span id="hour"></span>시
+							<div class="br"></div>
+							
+							<script>
+								var dt = new Date();
 								$('#month').text(dt.getMonth() + 1)
 								$('#day').text(dt.getDate())
 								$('#hour').text(dt.getHours())
-							}
-						</script>
-	
-						<b>의뢰비</b><br>
-						<input class="inputText" type="text" value=""><br>
-						<div class="br"></div>
-						
-						<b>공개여부</b><br>
-						<label class="switch">
-						<input type="checkbox">
-						<span class="slider round"></span>
-						</label>
-						<p>&nbsp;공개</p><p style="display:none;">&nbsp;비공개</p>
+								
+								function selectDate() {
+									dt = new Date();
+									
+									dt.setDate(dt.getDate() + 0);
+									/* dt.setDate(dt.getDate() + $('#optionDay option:selected').val()) */
+									dt.setHours(dt.getHours() + $('#optionHour option:selected').val())
+									
+									$('#month').text(dt.getMonth() + 1)
+									$('#day').text(dt.getDate())
+									$('#hour').text(dt.getHours())
+								}
+							</script>
+		
+							<b>의뢰비</b><br>
+							<input class="inputText" type="text" value=""><br>
+							<div class="br"></div>
+							
+							<b>공개여부</b><br>
+							<label class="switch">
+							<input type="checkbox">
+							<span class="slider round"></span>
+							</label>
+							<p>&nbsp;공개</p><p style="display:none;">&nbsp;비공개</p>
+							
+							<script>
+								var check = $("input[type='checkbox']");
+								check.click(function(){
+									$("p").toggle();
+								});
+							</script>
+						</div>
+						<div class="sectionafter"></div>
+					</div>
+					
+					<div class="br" style="border-bottom: 2px solid gray"></div>
+					<div class="br"></div>
+					
+					<div class="fullLine">
+						<div class="leftLine">
+							5. 참고할 첨부파일이 있으신가요?
+						</div>
+						<div class="rightLine">
+							<!-- <br> -->
+							<div id="fileList"></div>
+							<div id="fileAdd">
+								<img src="${ contextPath }/views/images/add.png">
+								<span>파일 추가</span>
+							</div>
+						</div>
+						<div class="sectionafter"></div>
 						
 						<script>
-							var check = $("input[type='checkbox']");
-							check.click(function(){
-								$("p").toggle();
+							var fileNum = 0;
+							$('#fileAdd').click(function(){
+								$('#fileList').append("<input type='file' hidden='' onchange='changeFile(this)' id='fileNum" + fileNum + "' name='fileNum" + fileNum + "'>");
+								$('#fileNum' + fileNum).click();
+								fileNum++;
+							});
+							
+							function changeFile(file) {
+								var fileValue = file.value;
+								var fileUrl = fileValue.lastIndexOf("\\") + 1;
+								var fileName = fileValue.substring(fileUrl);
+								
+								if(fileValue != "") {
+									var $div = $('<div class="fileArea">');
+									var $img1 = $('<img class="fileAreaRemove">');
+									var $img2 = $('<img class="fileAreaImg">');
+									var $p = $('<p>')
+									
+									$p.text(fileName);
+									
+									$img1.attr("src", "${ contextPath }/views/images/x-button.png");
+									
+									var reader = new FileReader();
+									
+									reader.onload = function(e){
+										$img2.attr("src", e.target.result);
+									}
+									
+									reader.readAsDataURL(file.files[0]);
+									
+									$div.append($img1);
+									$div.append($img2);
+									$div.append($p)
+									
+									$('#fileList').append($div);
+								}
+							}
+							
+							$(document).on("click", ".fileAreaRemove", function(){
+								this.parentNode.remove();
 							});
 						</script>
 					</div>
 					
-					<div class="br" style="border-bottom: 2px solid gray"></div>
-					<div class="br"></div>
 					
-					<div class="leftLine">
-						5. 참고할 첨부파일이 있으신가요?
-					</div>
-					<div class="rightLine">
-						<!-- <br> -->
-						<div id="fileList">
-							<!-- 5. 참고할 첨부파일이 있으신가요? 글씨 내려가는거랑 fileArea 상단에 공간 뜨는거 해결해야됨 -->
-							<%-- <div class="fileArea">
-								<img src="${ contextPath }/views/images/x-button.png" class="fileAreaRemove">
-								<img src='' class="fileAreaImg">
-								123.jpg
-							</div> --%>
-						</div>
-						<div id="fileAdd">
-							<img src="${ contextPath }/views/images/add.png">
-							<span>파일 추가</span>
-						</div>
-					</div>
-					
-					<script>
-						var fileNum = 0;
-						$('#fileAdd').click(function(){
-							$('#fileList').append("<input type='file' hidden='' onchange='changeFile(this)' id='fileNum" + fileNum + "' name='fileNum" + fileNum + "'>");
-							$('#fileNum' + fileNum).click();
-							fileNum++;
-						});
-						
-						function changeFile(file) {
-							var fileValue = file.value;
-							var fileUrl = fileValue.lastIndexOf("\\") + 1;
-							var fileName = fileValue.substring(fileUrl);
-							
-							if(fileValue != "") {
-								var $div = $('<div class="fileArea">');
-								var $img1 = $('<img class="fileAreaRemove">');
-								var $img2 = $('<img class="fileAreaImg">');
-								
-								$img1.attr("src", "${ contextPath }/views/images/x-button.png");
-								
-								var reader = new FileReader();
-								
-								reader.onload = function(e){
-									$img2.attr("src", e.target.result);
-								}
-								
-								reader.readAsDataURL(file.files[0]);
-								
-								$div.append($img1);
-								$div.append($img2);
-								$div.append(fileName);
-								
-								$('#fileList').append($div);
-							}
-							
-							/* stringByteLength = fileName.replace(/[\0-\x7f]|([0-\u07ff]|(.))/g,"$&$1$2").length;
-							console.log(stringByteLength + " Bytes"); 길이 길어지면 ...으로 표시할 방법 찾는 중*/
-						}
-						
-						$(document).on("click", ".fileAreaRemove", function(){
-							this.parentNode.remove();
-						});
-					</script>
 					
 					<div class="br" style="border-bottom: 2px solid gray"></div>
 					

@@ -48,6 +48,7 @@
 		height: 50px;
 		font-size: 13pt;
 		line-height: 50px;
+		margin: 10px;
 	}
 	.redColor {
 		color: rgb(224, 63, 58);
@@ -140,7 +141,7 @@
 		line-height: 50px;
 		font-size: 14pt;
 		text-align: center;
-		background-color: rgb(224, 224, 224);
+		background-color: rgba(161, 206, 244, 0.55);
 		border-radius: 5px;
 		cursor: pointer;
 		font-weight: bold;
@@ -400,12 +401,12 @@
 						$('#submit').hover(function(){
 							$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
 						}, function(){
-							$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
+							$(this).css({'background-color':'rgba(161, 206, 244, 0.55)', 'color':'black'})
 						});
 						$('#cancle').hover(function(){
 							$(this).css({'background-color':'rgb(52, 152, 219)', 'color':'white'})
 						}, function(){
-							$(this).css({'background-color':'rgb(224, 224, 224)', 'color':'black'})
+							$(this).css({'background-color':'rgba(161, 206, 244, 0.55)', 'color':'black'})
 						})
 					</script>
 				</form>

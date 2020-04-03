@@ -93,15 +93,79 @@
 	}
 	#smallInfoContent {
 		position: absolute;
-		right: -400px;
+		right: -350px;
 		background-color: white;
-		width: 400px;
+		width: 350px;
 		height: 100%;
 		float: right;
 		transition: right 0.5s ease;
 	}
 	#smallInfoContent.open {
 		right: 0px;
+	}
+	#profile_wrap {
+		display: table;
+		margin: 0 auto;
+	}
+	#profile_img {
+		width: 80px;
+		height: 80px;
+		display: inline-table;
+		border-radius: 50%;
+		margin-right: 20px;
+		overflow: hidden;
+		
+		border: 1px solid black;
+	}
+	#profile_img img {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	#profile_wrap b {
+		height: 80px;
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 16pt;
+	}
+	.smallMenu {
+		width: 100px;
+		display: inline-table;
+		margin: 8px;
+		font-size: 13pt;
+		padding: 10px;
+		border-radius: 25px;
+		cursor: pointer;
+	}
+	.yellow {
+		background-color: rgb(255, 249, 196);
+	}
+	.blue {
+		background-color: rgb(179, 229, 252);
+	}
+	.smallMenu img {
+		width: 80px;
+		height: 80px;
+		margin-bottom: 10px;
+	}
+	#recently {
+		width: 200px;
+		display: inline-table;
+		font-size: 14pt;
+		font-weight: bold;
+		padding: 10px;
+		margin-bottom: 20px;
+		border-top: 2px solid gray;
+		border-bottom: 2px solid gray;
+	}
+	.recentlyBoard {
+		margin: 0 auto;
+		width: 300px;
+		padding: 10px;
+		font-size: 13pt;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	
 	#menuHeaderWrap {
@@ -199,13 +263,52 @@
 
 				<div id="smallInfo">
 					<div id="smallInfoContent">
-						<div id="smallInfoWrap">
-							김대호님
-							<br><br>
-							보유 point : 4685<br>
-							보유 cash : 7412<br><br>
-							최근 본 글							
+						<div style="height: 60px;"></div>
+						<div id="profile_wrap">
+							<div id="profile_img"><img src=''></div>
+							<b>김대호 님</b>
 						</div>
+						
+						<div style="height: 30px;"></div>
+						
+						<div class="smallMenu yellow">
+							<img src="${ contextPath }/views/images/point.png">
+							<br><b>100 POINT</b>
+						</div>
+						
+						<div class="smallMenu yellow">
+							<img src="${ contextPath }/views/images/cash.png">
+							<br><b>100 CASH</b>
+						</div>
+						
+						<div class="smallMenu blue">
+							<img src="${ contextPath }/views/images/info.png">
+							<br><b>마이페이지</b>
+						</div>
+						
+						<div class="smallMenu blue">
+							<img src="${ contextPath }/views/images/logout.png">
+							<br><b>로그아웃</b>
+						</div>
+						
+						<div style="height: 60px;"></div>
+						
+						<div id="recently">최근 본 글</div>
+						<div class="recentlyBoard">
+							1번글제목이 엄청나게 길면 어떻게 될까요ㅎㅎㅎㅎㅎㅎㅎㅎㅎ
+						</div>
+						<div class="recentlyBoard">
+							2번글제목
+						</div>
+						<div class="recentlyBoard">
+							3번글제목
+						</div>
+						<div class="recentlyBoard">
+							4번글제목
+						</div>
+						<div class="recentlyBoard">
+							5번글제목
+						</div>				
 					</div>
 				</div>
 				

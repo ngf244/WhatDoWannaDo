@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript" src="../../se2/js/service/HuskyEZCreator.js" charset="utf-8"></script>
+<script type="text/javascript" src="../../se2/quick_photo_uploader/plugin/hp_SE2M_AttachQuickPhoto.js" charset="utf-8"> </script>
 <style>
 	#mainWrap {
 		width: 80%;
@@ -109,23 +111,27 @@
 		min-height: 500px;
 		height: auto;
 	}
-	#registContent {
-		width: 60%;
-		height: 500px;
-		float: left;
-	}
 	#buyerInfo {
-		width: 98%;
-		height: 150px;
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		
+		border: 1px solid black;
+	}
+	#contentWrap {
+		width: 80%;
+		margin: 0 auto;
 	}
 	#content {
 		width: 98%;
 		height: 300px;
 	}
 	#registChat {
-		width: 35%;
+		position: absolute;
+		bottom: 100px;
+		right: 50px;
+		width: 300px;
 		height: 500px;
-		float: right;
 		
 		border: 1px solid black;
 	}
@@ -389,17 +395,17 @@
 					
 					
 					<div id="registWrap">
-						<div id="registContent">
-							<div id="buyerInfo">
-								<div class="leftLine">
-									의뢰인 정보
-								</div>
-								<div class="rightLine">
-									정문종 하나 284-891239-76707 <br>
-									010-5217-5324
-								</div>
+						<div id="buyerInfo">
+							<div class="leftLine">
+								의뢰인 정보
 							</div>
-							
+							<div class="rightLine">
+								정문종 하나 284-891239-76707 <br>
+								010-5217-5324
+							</div>
+						</div>
+						
+						<div id="contentWrap">
 							<textarea name="content" id="content"></textarea>
 						</div>
 						
@@ -424,6 +430,17 @@
 							</div>
 							<div id="chatBottom">내용 입력받을 부분</div>
 						</div>
+						
+						<script> 
+							function scroll_follow(id){
+					  			$(window).scroll(function(){  //스크롤이 움직일때마다 이벤트 발생
+					      			var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환
+					      			$(id).stop().animate({top:290+position+"px"}, 300); //해당 오브젝트 위치값 재설정
+					   			});
+							}
+					 		scroll_follow("#registChat");
+						</script> 
+						
 					</div> <br>
 					
 					<div id="btnList">

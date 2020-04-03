@@ -45,9 +45,6 @@
 </head>
 <body>
 		<div class="findmaintitle"></div>
-			
-		
-	
 				<div class="findbutton">
 					<button type="button" class="findidbutton">아이디 찾기</button><br><br>
 					<button type="button" class="findpwdbutton">비밀번호 찾기</button>

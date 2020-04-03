@@ -82,7 +82,7 @@
 <a href="http://developers.kakao.com/logout"></a>
    
       <div class="loginTitle">
-         <img src="<%= request.getContextPath() %>/sources/image/logintitle.png" id="logo">
+         <img src="<%= request.getContextPath() %>/images/loginlogo.png" id="logo">
       </div>
       		
       <div class="title">		
@@ -92,10 +92,10 @@
       
       <div class="loginform">
          <input type="text" id="loginId" name="userId" class="inputForm" placeholder="&nbsp;아이디" > <br>
-         	<input type="password" id="loginPw" name="password" class="inputPwForm" placeholder="&nbsp;비밀번호" ><br>
-            	<button type="button" id="loginBtn">로그인 </button><br>
-            		<button type="button" id="kakaoBtn">카카오아이디 로그인</button><br>
-         				<button type ="button" id="googleBtn">구글아이디 로그인</button>
+         <input type="password" id="loginPw" name="password" class="inputPwForm" placeholder="&nbsp;비밀번호" ><br>
+         <button type="button" id="loginBtn">로그인 </button><br>
+         <button type="button" id="kakaoBtn">카카오아이디 로그인</button><br>
+         <button type ="button" id="googleBtn">구글아이디 로그인</button>
       </div>
 </body>
 </html>

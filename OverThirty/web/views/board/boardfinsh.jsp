@@ -92,16 +92,6 @@
   									<button type="button" class="replybutton">댓글작성</button>
   									</div>
   																				
-  																				
-  		
-  		
-  		
-  			
-  		
-  		
-  		
-  				
-						
 						
 		</div>					
 		<div id="right-side" style="background: blue">

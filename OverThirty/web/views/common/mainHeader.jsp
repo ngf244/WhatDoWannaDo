@@ -358,7 +358,7 @@
 				
 				<script>
 					$('#menuTextReply').hide();
-					! function loop(){
+					!function loop(){
 						setTimeout(function() {
 							if($("#menuTextReply").css("display") == "none"){
 								$('#menuTextBoard').hide();
@@ -371,6 +371,9 @@
 						}, 1500)
 					}()
 					
+					/* !function name() {
+						console.log('되나');
+					}() -> !로 시작하고 ()로 끝내면 자동실행*/
 				</script>
 			</div>
 		</div>

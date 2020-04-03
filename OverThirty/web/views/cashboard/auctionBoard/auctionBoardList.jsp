@@ -86,6 +86,7 @@ link href ="https: //fonts.googleapis.com /css?family=Noto+Sans+KR
 	margin-right: 20px;
 	position: relative;
 	display: inline-table;
+	display: block;
 }
 
 #buttonSelect {
@@ -100,10 +101,6 @@ link href ="https: //fonts.googleapis.com /css?family=Noto+Sans+KR
 	border: none;
 	font-weight: bolder;
 }
-
-#buttonSelectNSerch {
-	display: block;
-	}
 
 #dropCategory {
 	position: relative;

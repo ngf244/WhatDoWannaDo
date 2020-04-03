@@ -1,256 +1,585 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <style>
-	#content{
-		width: 100%;
-		min-height: 600px;
-	}
-	#left-side{
-		float:left;
-		width: 12%;
-		display: inline-block;
-		min-height: 600px;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		margin: auto;
-	}
-	#main {
-		width : 70%;
-		display : inline-block;
-		min-height : 600px;
-		/* margin-bottom: 20px; */
-		margin: auto;
-		
-		/* border: 1px solid black; */
-	}
-	#right-side{
-		float:right;
-		width : 16.5%;
-		min-height : 600px;
-		display: inline-block;
-		margin-bottom: 20px;
-		margin: auto;
-	}
-	#slideBar {
-		margin-top: 50px;
-		width: 100%;
-		height: 200px;
-		border: 1px solid black;
-	}
+<
+link href ="https: //fonts.googleapis.com /css?family=Noto+Sans+KR
+	 &display =swap" rel ="stylesheet ">#content {
+	width: 100%;
+	min-height: 600px;
+}
+
+#slideBar {
+	margin-top: 50px;
+	width: 100%;
+	height: 200px;
+	border: 1px solid black;
+}
+
+.mainBackground {
+	background-color: rgba(224, 224, 224, 0.16);
+	border-bottom: 1px solid rgba(200, 200, 200, 0.7);
+	padding-top: 70px;
+	padding-bottom: 70px;
+	padding-top: 70px;
+}
+
+#randomThumbnail {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+	display: block;
+	position: absolute;
+}
+
+#randomThumbnailForm {
+	margin-left: 1150px;
+	margin-top: 0px;
+	width: 200px;
+	height: 200px;
+	display: inline;
+	position: absolute;
+	text-align: center;
+}
+
+.mainHeaderBar {
+	display: inline-table;
+	margin-top: 50px;
+	margin-left: 100px;
+	text-align: left;
+	font-size: 33px;
+	font-weight: bolder;
+	height: 90px;
+}
+
+#mainBar {
+	display: inline-table;
+	margin-top: 0px;
+	margin-left: 30px;
 	
-	#randomThumbnail{margin-left: 950px; margin-top: 80px; width: 250px; height:250px; border: 1px solid black; display: inline; position: absolute; }
+	font-size: 20px;
+	line-height: 200%;
+	height: 100px;
+}
+
+#manyProjectForm{
+	margin-left:30px;
+}
+
+#manyProject {
+	margin-top: 30px;
+	margin-left: 0px;
+	margin-bottom: 30px;
+	width: 35px;
+	font-size: 20px;
+	border: 0px;
+}
+
+/* 카테고리, 진행상태 버튼 */
+#buttonSelectNSerch {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	position: relative;
+	display: inline-table;
+}
+
+#buttonSelect {
+
+	width: 172px;
+	line-height: 34px;
+	height: 34px;
+	background-color: rgba(161, 206, 244, 0.55);
+	padding: 8px;
+	font-size: 15px;
+	border: none;
+	font-weight: bolder;
+	margin-right:50px;
+}
+
+#buttonSelectNSerch {
+	display: block;
+	}
+
+#dropCategory {
+	position: relative;
+	display: inline-block;
+	text-align: center;
 	
-	.mainHeaderBar{margin-top: 50px; text-align:left; width: 100%; height: 100px; border: 1px solid black; }
- 	#mainBar {
-		margin-top: 40px;
-		width: 100%;
-		height: 100px;
-		border: 1px solid black;		} 
-	#buttonList{margin-top: 80px; }
-	#buttonList button:nth-child(1){margin-left: 20px;}
-	#buttonList button:nth-child(3){float:right;margin-right: 20px;}
-	
-    #manyProject{margin-top: 20px; width: 360px; margin-left: 20px;  font-size:20px; border:0px; background:#ffeeee; }
+}
+
+.dropdown-category {
+	display: none;
+	position: absolute;
+	background-color: rgba(161, 206, 244, 0.55);
+	min-width: 75px;
+	padding: 5px;
+}
+
+.dropdown-category a {
+	color: black;
+	padding: 8px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-category a:hover {
+	background-color: rgb(52, 152, 219);
+}
+
+#dropCategory:hover .dropdown-category {
+	display: block;
+}
+
+#dropCategory:hover #buttonSelect {
+	background-color: rgb(52, 152, 219);
+}
 
 
- 
-				
-		
-	/* 카테고리, 진행상태 버튼 */		
-	#buttonSelectNSerch{margin-top: 20px;  margin-left: 20px; margin-right:20px; position: relative; display: inline-block;}
-	#buttonSelect{
-			
-			background-color: #FFDAB9;
-			padding: 8px;
-			font-size: 15px;
-			border: none;
-		}		
-	#buttonSelectNSerch{display: block; border: 1px solid black;}	
-	#dropCategory{position: relative; display: inline-block;}	
-	.dropdown-category{			
-			display: none;
-			position: absolute;
-			background-color: #FFDAB9;
-			min-width: 75px;
-			padding: 5px;
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}	
-	.dropdown-category a{
-			color: black;
-			padding: 8px;
-			text-decoration: none;
-			display: block;
-	}
+.dropdown-category > a {	
+	width: 180px;
+	height: 40px;
+	line-height: 38px;	
+	float: right;
+	font-size: 15px;
+	text-decoration: none;
+	text-align: center;
+	background-color: rgba(161, 206, 244, 0.7);
+	color: black;
+	font-weight: bold;
+	padding: 10px 0;
 	
-	.dropdown-category a:hover { background-color: #CD853F; }
-	#dropCategory:hover .dropdown-category { display: block; }	 
-	#dropCategory:hover #buttonSelect{ background-color: #CD853F; }
+}
+
+
+
+
+
+#dropProgress {
+	display: inline-table;
+	width: 200px;
+	margin-right: 35px;
+}
+
+.progress {
+	display: inline-block;
+	line-height: 34px;
+	height: 34px;
+	background-color: white;
+	padding: 8px;
+	font-size: 15px;
+	border: 1px solid rgba(200, 200, 200, 0.6);
+	cursor: pointer;
+}
+
+.dropProgressActive {
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#guideBtn {
+	display: inline-block;
+	line-height: 34px;
+	height: 34px;
+	background-color: rgba(161, 206, 244, 0.55);
+	padding: 8px;
+	font-size: 15px;
+	border: 0px solid rgba(200, 200, 200, 0.6);
+	cursor: pointer;
+}
+
+#searchBtn {
+	display: inline-block;
+	margin-left: 29%;
+	margin-right: 20px;
+}
+
+.buttonSerch {
+	display: inline-block;
+	line-height: 34px;
+	height: 34px;
+	background-color: white;
+	padding: 8px;
+	font-size: 15px;
+	border: 1px solid #b8b8b8x;
+}
+
+#imgSearch {
+	width: 40px;
+	height: 34px;
+}
+
+#img-thumbnail1 {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+}
+
+.boardCate {
+	color: #e54e40;
+	display: inline-block;
+	font-size: 19px;
+}
+
+.boardTitle {
+	color: black;
+	display: inline-block;
+	font-size: 19px;
+}
+
+.boardContent {
+	color: black;
+	display: inline-block;
+	font-size: 16px;
+}
+
+#categoryName {
+	display: inline-block;
+	height: 40px;
+}
+
+#categorySubject {
+	display: inline-block;
+}
+
+#contentName {
+	height: 100px;
+}
+
+.boardList {
+	cursor:pointer;
+	padding: 10px;
+	margin: 20px;
+	border: 1px solid #d6d6d6;
+	border-bottom-color: #b8b8b8;
+	border-right-color: #b8b8b8;
+}
+
+.boardImg {
+	display: inline-table;
+	width: 140px;
+	height: 140px;
+	margin: 5px;
+	border: 1px solid black;
+}
+.boardReq{
+	margin-top: 10px;
+	padding-bottom:5px;
+	margin-bottom: 13px; 
+	border-bottom:1px solid black;
+}
+
+.boardCon {
+	/* width 값은 script로 별도 지정 */
+	display: inline-table;
+	height: 140px;
+	margin: 5px;
+}
+
+.leftCon {
+	display: inline-table;
+	width: 70%;
+	height: 140px;
+	margin-left: 10px;
+}
+
+.rightCon {
+	display: inline-table;
+	width: 25%;
+	height: 140px;
+	float: right;
+}
+
+.rightBtn {
+	display: inline-table;
+	width: 100%;
+	height: 38px;
+	margin: 5px;
+	margin-top:8px;
+	line-height: 35px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 5px;
+	background-color: rgb(235, 239, 242);
+	line-height: 35px;
+}
+
+#pageNum {
+	margin-top: 15px;
+	margin-left: 17px;
+	margin-right: 20px;
+	text-align: left;
+	border-top: 1px solid black;
+	padding-top: 8px;
+}
+
+.pageBtn {
+	display: inline-table;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin: 1px;
+	cursor: pointer;
+	text-align: center;
+}
+
+#pageNum :nth-child(1) {
+	background-color: #302f3a;
+	color: white;
+}
+
+#pageNum :nth-child(2) {
+	background-color: #ddd;
+	color: black;
+}
+
+#pageNum :nth-child(3) {
+	background-color: #ddd;
+	color: black;
+}
+
+#pageNum > a {	
+	width: 180px;
+	height: 40px;
+	line-height: 38px;	
+	float: right;
+	font-size: 15px;
+	text-decoration: none;
+	text-align: center;
+	background-color: red;
+	color: white;
+	font-weight: bold;
+	padding: 10px 0;
 	
-	
-	#progressSelect{
-		background-color: #FFDAB9;
-		padding: 8px;
-		font-size: 15px;
-		border: none;
-	}	
-	#dropProgress{position: relative; display: inline-block;}	
-	.dropdown-prgress{			
-			display: none;
-			position: absolute;
-			background-color: #FFDAB9;
-			min-width: 75px;
-			padding: 5px;
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}	
-	.dropdown-prgress a{
-			color: black;
-			padding: 8px;
-			text-decoration: none;
-			display: block;
-	}
-	
-	.dropdown-prgress a:hover { background-color: #CD853F; }
-	#dropProgress:hover .dropdown-prgress { display: block; }	 
-	#dropProgress:hover #progressSelect{ background-color: #CD853F; }
-			
-	#buttonSelectNSerch > .buttonSerch{position: relative; background-color: #FFDAB9; padding: 8px; font-size: 15px;
-			border: none; float:right;}
-	
-	
-	
-	
-	#onelistForm{margin-left:20px; margin-right:20px; margin-top:50px;}
-	#img-thumbnail1{width:200px; height:200px; border: 1px solid black;}
-	#onelistTable tr{border: 1px solid black; }
-	#onelistTable td{border: 1px solid black;}
-	#onelistTable tr:nth-child(1) td:nth-child(2){border: 2px solid black; width:900px; height: 10px;}
-	#onelistTable tr:nth-child(1) td:nth-child(3){border: 3px solid black; width:300px; height: 80px; }
-	#onelist {border: 1px solid black;}
-	#onelist > #categoryName{border:0px;}
-	#onelist > #oneName{border:0px; }
-	#onelist > #contentName{}
-	#categoryName{display: inline-block; height:40px;}
-	#categorySubject{display: inline-block;}
-	#contentName{height:100px;}
-	
-	/* 상금 */
-	#moneyDiv{ line-height: 100px; text-align: center;}
-	.howMoney{font-size: 20px; background-color: rgba(224, 224, 224, 0.5); }
-	.winMoney{font-size: 20px; background-color: rgba(224, 224, 224, 0.5); }
-		
-	/* 쪽번호 위치 */
-	#pageNum{margin-left:20px; margin-right:20px; border: 1px solid black; background-color: pink; text-align: center;}
-	
-	
-	
+}
+
+
 </style>
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="../../common/mainHeader.jsp"/>
+	<jsp:include page="../../common/mainHeader.jsp" />
 	<section>
-		<div id="content" >
+		<div id="content">
 			<div id="left-side" style="background-color: yellow;">
 				<div>왼쪽 영역</div>
 			</div>
-			
-			
-	
+
 			<!-- 공용영역 -->
 			<div id="main" style="background: white;">
-				<div id="randomThumbnail"> 
-					랜덤 사진값
-				</div>
-				<!-- 게시판 리스트 상단 -->
-				<div id="oneHeader">
-					<div class="mainHeaderBar">콘테스트 프로젝트</div>
+				<div class="mainBackground">
+					<div id="randomThumbnailForm">
+						콘테스트에 참여하세요
+						<div id="randomThumbnail">랜덤 사진값</div>
+					</div>
+
+					<!-- 게시판 리스트 상단 -->
+					<div id="oneHeader">
+						<div class="mainHeaderBar">콘테스트 프로젝트</div>
 						<div id="mainBar">
-							굉장히 쉽고 빠르게 의뢰하면서 <br>
-							다양한 에디터들에게 수많은 디자인을 받아보세요.
+							굉장히 쉽고 빠르게 의뢰하면서 <br> 다양한 에디터들에게 수많은 디자인을 받아보세요.
 						</div>
+					</div>
 				</div>
-				
-				<!-- 리스트 버튼  -->
-				<div id="buttonList">
-					<button>콘테스트 리스트</button>
-					<button>이용 가이드</button>
-					<button>콘테스트 개최</button>
-				</div>
-				
-				<hr>
-				
-				<input type="text" id="manyProject" name="manyContestProject" value="총 000개의 프로젝트가 선정되었습니다." readonly="readonly" >  
-				
-					
+
+
+
+
+				<div id="manyProjectForm">총 <input type="text" id="manyProject" name="manyContestProject"
+					value="000" readonly="readonly">개의 프로젝트가 선정되었습니다.
+				</div>	
+
+
 				<div id="buttonSelectNSerch">
 					<div id="dropCategory">
-						<button id="buttonSelect">&nbsp; 전체 카테고리 &nbsp;</button>
-							<div class="dropdown-category">
-								<a href="#">로고 디자인</a>
-								<a href="#">편집 디자인</a>
-								<a href="#">기타 디자인</a>
-							</div>
+						<div id="buttonSelect">&nbsp;전체 카테고리</div>
+						<div class="dropdown-category">
+							<a href="#">로고 디자인</a> 
+							<a href="#">편집 디자인</a> 
+							<a href="#">기타 디자인</a>
+						</div>
 					</div>
-					<div id="dropProgress">					
-						<button id="progressSelect">진행상태</button>
-							<div class="dropdown-prgress">
-								<a href="#">진행 중</a>
-								<a href="#">마감</a>
-							</div>				
-					</div>		
-					<input type="button" class="buttonSerch" value="검색"><input type="text" class="buttonSerch">
+					<div id="dropProgress">
+						<ul class="dropProgressActive">
+							<li class="progress">전체</li>
+							<li class="progress">진행 중</li>
+							<li class="progress">마감</li>
+						</ul>
+					</div>
+					<div id="guideBtn">이용 가이드</div>
+					<div id=searchBtn>
+						<input type="text" class="buttonSerch" placeholder="콘테스트 검색"> <img id="imgSearch" src="imgSearch1.png" alt="go">
+					</div>
 				</div>
-				
-				<div>
-				
-				</div>
-				
+
+
 				<!-- 리스트 시작 -->
-				<form id="onelistForm">
-					<table id="onelistTable">
-						<tr>
-							<td  rowspan="3">
-								<img id="img-thumbnail1" src='http://drive.google.com/uc?export=view&id=1V079qDax9ljZ2SVYWDtJaQ8JZOgKxLrB'>
-							</td>
-							<td>
-								<div id="categoryName">로고 디자인  </div>
-								<div id="categorySubject"> | 제목</div>
-								<div >의뢰인 : editor1</div>
-							</td>
-							<td>
-								<div id="moneyDiv"><span class="howMoney">상금&nbsp;&nbsp;&nbsp;</span><span class="winMoney">&nbsp;&nbsp;700,000원</span></div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div id="contentName">내용</div>		
-							</td>
-							<td>
-								<span id="dDay-editor">모집 마감일&nbsp;</span><span>3/21(토) </span> <span>지원자  </span> <span>2명</span>
-							</td>
-						</tr>
-					</table>
-					
-					
-				</form>
-				
-				<div id="pageNum">
-					쪽 번호 들어갈 부분
+				<div class="boardList">
+					<div class="boardImg">
+						<img src="">
+					</div>
+					<div class="boardCon">
+						<div class="leftCon">
+							<div class="boardCate">
+								<b>로고 디자인 &nbsp; |</b>
+							</div>
+							&nbsp;
+							<div class="boardTitle">
+								<b>제목 </b>
+							</div>
+							<div class="boardReq">의뢰인 : editor</div>
+								<div class="boardContent">
+								내용 : 어쩌고저쩌고 폰트도 좀 바꾸고 내용도 길게 받아서 2줄 3줄 되도록 해서 내용 충분히 이어지도록
+								죽는 날까지 하늘을 우러러 한 점 부끄럼이 없기를, 잎새에 이는 바람에도 나는 괴로워했다. 별을 노래하는 마음으로 모든 죽어 가는 것을 사랑해야지 그리고 나한테 주어진 길을 걸어가야겠다. 오늘 밤에도 별이 바람에 스치운다.
+								</div>
+						</div>
+						<div class="rightCon">
+							<div class="rightBtn">참여자 : 10명</div>
+							<div class="rightBtn">~ 2020.04.01</div>
+							<div class="rightBtn">상금 : 10만원</div>
+						</div>
+					</div>
 				</div>
+				<div class="boardList">
+					<div class="boardImg">
+						<img src="">
+					</div>
+					<div class="boardCon">
+						<div class="leftCon">
+							<div class="boardCate">
+								<b>로고 디자인 &nbsp; |</b>
+							</div>
+							&nbsp;
+							<div class="boardTitle">
+								<b>제목 </b>
+							</div>
+							<div class="boardReq">의뢰인 : editor</div>
+								<div class="boardContent">
+								내용 : 어쩌고저쩌고 폰트도 좀 바꾸고 내용도 길게 받아서 2줄 3줄 되도록 해서 내용 충분히 이어지도록
+								죽는 날까지 하늘을 우러러 한 점 부끄럼이 없기를, 잎새에 이는 바람에도 나는 괴로워했다. 별을 노래하는 마음으로 모든 죽어 가는 것을 사랑해야지 그리고 나한테 주어진 길을 걸어가야겠다. 오늘 밤에도 별이 바람에 스치운다.
+								</div>
+						</div>
+						<div class="rightCon">
+							<div class="rightBtn">참여자 : 10명</div>
+							<div class="rightBtn">~ 2020.04.01</div>
+							<div class="rightBtn">상금 : 10만원</div>
+						</div>
+					</div>
+				</div>
+				<div class="boardList">
+					<div class="boardImg">
+						<img src="">
+					</div>
+					<div class="boardCon">
+						<div class="leftCon">
+							<div class="boardCate">
+								<b>로고 디자인 &nbsp; |</b>
+							</div>
+							&nbsp;
+							<div class="boardTitle">
+								<b>제목 </b>
+							</div>
+							<div class="boardReq">의뢰인 : editor</div>
+								<div class="boardContent">
+								내용 : 어쩌고저쩌고 폰트도 좀 바꾸고 내용도 길게 받아서 2줄 3줄 되도록 해서 내용 충분히 이어지도록
+								죽는 날까지 하늘을 우러러 한 점 부끄럼이 없기를, 잎새에 이는 바람에도 나는 괴로워했다. 별을 노래하는 마음으로 모든 죽어 가는 것을 사랑해야지 그리고 나한테 주어진 길을 걸어가야겠다. 오늘 밤에도 별이 바람에 스치운다.
+								</div>
+						</div>
+						<div class="rightCon">
+							<div class="rightBtn">참여자 : 10명</div>
+							<div class="rightBtn">~ 2020.04.01</div>
+							<div class="rightBtn">상금 : 10만원</div>
+						</div>
+					</div>
+				</div>
+				<div class="boardList">
+					<div class="boardImg">
+						<img src="">
+					</div>
+					<div class="boardCon">
+						<div class="leftCon">
+							<div class="boardCate">
+								<b>로고 디자인 &nbsp; |</b>
+							</div>
+							&nbsp;
+							<div class="boardTitle">
+								<b>제목 </b>
+							</div>
+							<div class="boardReq">의뢰인 : editor</div>
+								<div class="boardContent">
+								내용 : 어쩌고저쩌고 폰트도 좀 바꾸고 내용도 길게 받아서 2줄 3줄 되도록 해서 내용 충분히 이어지도록
+								죽는 날까지 하늘을 우러러 한 점 부끄럼이 없기를, 잎새에 이는 바람에도 나는 괴로워했다. 별을 노래하는 마음으로 모든 죽어 가는 것을 사랑해야지 그리고 나한테 주어진 길을 걸어가야겠다. 오늘 밤에도 별이 바람에 스치운다.
+								</div>
+						</div>
+						<div class="rightCon">
+							<div class="rightBtn">참여자 : 10명</div>
+							<div class="rightBtn">~ 2020.04.01</div>
+							<div class="rightBtn">상금 : 10만원</div>
+						</div>
+					</div>
+				</div>
+				<div class="boardList">
+					<div class="boardImg">
+						<img src="">
+					</div>
+					<div class="boardCon">
+						<div class="leftCon">
+							<div class="boardCate">
+								<b>로고 디자인 &nbsp; |</b>
+							</div>
+							&nbsp;
+							<div class="boardTitle">
+								<b>제목 </b>
+							</div>
+							<div class="boardReq">의뢰인 : editor</div>
+								<div class="boardContent">
+								내용 : 어쩌고저쩌고 폰트도 좀 바꾸고 내용도 길게 받아서 2줄 3줄 되도록 해서 내용 충분히 이어지도록
+								죽는 날까지 하늘을 우러러 한 점 부끄럼이 없기를, 잎새에 이는 바람에도 나는 괴로워했다. 별을 노래하는 마음으로 모든 죽어 가는 것을 사랑해야지 그리고 나한테 주어진 길을 걸어가야겠다. 오늘 밤에도 별이 바람에 스치운다.
+								</div>
+						</div>
+						<div class="rightCon">
+							<div class="rightBtn">참여자 : 10명</div>
+							<div class="rightBtn">~ 2020.04.01</div>
+							<div class="rightBtn">상금 : 10만원</div>
+						</div>
+					</div>
+				</div>
+
+
 				
-				
-				
-			<!-- main영역 끝 -->	
+
+				<!-- 쪽번호 부분 -->
+				<script>
+					$('.boardCon').width($('.boardList').width() - 200)
+				</script>
+
+				<div id="pageNum">
+					<div class="pageBtn">1</div>
+					<div class="pageBtn">2</div>
+					<div class="pageBtn">3</div>
+					<!-- 콘테스트 개최 버튼  -->
+					<a href="#">콘테스트 개최하기</a>
+				</div>
 			</div>
-			
-			<!-- 공용영역 -->
-			<div id="right-side" style="background: blue">
-				<div>오른쪽 영역</div>
-			</div>
+
+
+			<!-- main영역 끝 -->
+		</div>
+
+		<!-- 공용영역 -->
+		<div id="right-side" style="background: blue">
+			<div>오른쪽 영역</div>
 		</div>
 	</section>
-	<jsp:include page="../../common/footer.jsp"/>
+	<jsp:include page="../../common/footer.jsp" />
+
+
+
+
 </body>
 </html>

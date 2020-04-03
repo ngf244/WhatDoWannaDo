@@ -8,11 +8,13 @@
 	.cashChangeList{
 		border: 1px solid lightgray;
 		height: 1000px;
+		width: 80%;
+		margin: auto;
 	}
 
-	.cashChangeListTopArea{height: 100px; background: #3DB7CC; color: white; font-size: 25pt; box-shadow: 2px 2px 5px black;}
+	.cashChangeListTopArea{height: 60px; background: #3DB7CC; color: white; font-size: 18pt; box-shadow: 2px 2px 5px black;}
 	
-	#cashChangeListText{font-weight: bolder; margin-top: 25px; padding-left: 40px; padding-right: 30px; display:inline-block;}
+	#cashChangeListText{font-weight: bolder; margin-top: 12px; padding-left: 40px; padding-right: 30px; display:inline-block;}
 
 	#cashChangeListContent{
 		height: 870px;
@@ -25,8 +27,8 @@
 		margin-left: 400px;
 		margin-top: 40px;
 		border: 1px solid black;
-		width: 40%;
-		height: 150px;
+		width: 35%;
+		height: 120px;
 		box-shadow: 2px 2px 5px black;
 		border-radius: 5px;
 	}
@@ -34,7 +36,7 @@
 	#nowCashText{
 		font-size: 30pt;
 		display: inline-block;
-		margin: 43px;
+		margin: 35px;
 		font-weight: bold;
 	}
 
@@ -42,7 +44,7 @@
 		font-size: 30pt;
 		display: inline-block;
 		float: right;
-		margin: 43px;
+		margin: 35px;
 		margin-right: 50px;
 		color: rgb(231, 76, 60);
 		font-weight: bold;
@@ -54,7 +56,7 @@
 		border: 1px solid black;
 		margin: 30px;
 		margin-top: 30px; */
-		width:1100px; min-height:50px; padding-bottom: 50px;
+		min-height:50px; padding-bottom: 50px;
 		margin-left:auto; margin:auto; margin-top:50px;			
 	}
 	

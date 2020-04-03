@@ -6,13 +6,15 @@
 <meta charset="UTF-8">
 <style>
 	.commentList{
-		height: 1030px;
+		height: 990px;
+		width: 80%;
 		border: 1px solid lightgray;
+		margin: auto;
 	}
 
-	.commentListTopArea{height: 100px; background: #4374D9; color: white; font-size: 25pt; box-shadow: 2px 2px 5px black;}
+	.commentListTopArea{height: 60px; background: #4374D9; color: white; font-size: 18pt; box-shadow: 2px 2px 5px black;}
 	
-	#commentListText{font-weight: bolder; margin-top: 25px; padding-left: 40px; padding-right: 30px; display:inline-block;}
+	#commentListText{font-weight: bolder; padding-left: 40px; margin-top: 12px; padding-right: 30px; display:inline-block;}
 
 	#commentListContent{
 		height: 900px;
@@ -31,15 +33,16 @@
 		border: 1px solid black;
 		margin: 30px;
 		margin-top: 30px; */
-		width:1100px; min-height:50px; padding-bottom: 50px;
+		min-height:50px; padding-bottom: 50px;
 		margin-left:auto; margin:auto; margin-top:50px;		 
 	}
 	
 	/* 전체 댓글 게시판 테이블 */
-	#boardTable{text-align:center; margin: auto; width: 1100px;}
-	#boardTable th{border-bottom: 3px solid lightgray; background: #ececec; height: 50px; font-size: 15pt; border-bottom: 3px solid #036;}
-	#boardTable td{border-bottom: 1px solid lightgray; height: 40px; font-size: 12pt;}	
-
+	#boardTable{text-align:center; margin: auto;}
+	#boardTable th{border-bottom: 3px solid lightgray; background: #ececec; height: 50px; font-size: 13pt; border-bottom: 3px solid #036;}
+	#boardTable td{border-bottom: 1px solid lightgray; height: 40px; font-size: 11pt;}	
+	#boardTable tr:hover{background: rgba(161, 206, 244, 0.55)}
+	
 	.orgBtn{
 		width: 120px;
 		height: 30px;
@@ -92,86 +95,90 @@
 				<div id="commentListContent">
 					<div class="commentBoard">
 						<table id="boardTable">
-							<tr>
-								<th style="width: 60%;">댓글</th>
-								<th style="width: 15%">원문보기</th>
-								<th style="width: 20%">작성일</th>
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>
-							<tr>
-								<td>댓글 내용</td>
-								<td><button class="orgBtn">원문보기</button></td>
-								<td>2020.03.25.</td>							
-							</tr>																																																																																																		
+							<thead>
+								<tr>
+									<th style="width: 60%;">댓글</th>
+									<th style="width: 15%">원문보기</th>
+									<th style="width: 20%">작성일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>
+								<tr>
+									<td>댓글 내용</td>
+									<td><button class="orgBtn">원문보기</button></td>
+									<td>2020.03.25.</td>							
+								</tr>							
+							</tbody>
 						</table>
 					</div>
 					<div class="pagingCenter">

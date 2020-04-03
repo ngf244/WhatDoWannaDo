@@ -9,25 +9,26 @@
 	/* 마이페이지 사이드 메뉴 스크롤 */
 	#scroll{
 		font-size: 15pt;
-		background: #003399;
 		color: white;
 		font-weight: bolder;
 		border-radius: 5px;
+		margin-left: 3%;
+		border: 1px solid gray;
 	}
 	#scroll>span{
 		font-size: 17pt;
 		padding: 20px;
-		background: black;
+		background: rgb(52, 152, 219);
 		border-radius: 5px;
 	}
 	#scroll>table{
-		padding: 15px;
-		margin-top: 20px;
-		line-height: 60px;
+		padding: 10px;
+		line-height: 50px;
+		text-indent: 10px;
 	}
-	td>a:link { color: white; text-decoration: none;}
-	td>a:visited { color: white; text-decoration: none;}
- 	td>a:hover { color: white; text-decoration: underline;}
+	td>a:link { color: black; text-decoration: none;}
+	td>a:visited { color: black; text-decoration: none;}
+ 	td>a:hover { color: black; text-decoration: underline;}
 
 </style>
 </head>
@@ -37,7 +38,7 @@
 		function scroll_follow(id){
   			$(window).scroll(function(){  //스크롤이 움직일때마다 이벤트 발생
       			var position = $(window).scrollTop(); // 현재 스크롤바의 위치값을 반환
-      			$(id).stop().animate({top:290+position+"px"}, 500); //해당 오브젝트 위치값 재설정
+      			$(id).stop().animate({top:290+position+"px"}, 200); //해당 오브젝트 위치값 재설정
    			});
 		}
  			scroll_follow("#scroll");

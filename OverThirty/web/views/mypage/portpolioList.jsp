@@ -7,12 +7,14 @@
 <style>
 	.portpolioList{
 		border: 1px solid lightgray;
-		height: 1500px;
+		height: 1230px;
+		width: 80%;
+		margin: auto;
 	}
 
-	.portpolioListTopArea{height: 100px; background: #4374D9; color: white; box-shadow: 2px 2px 5px black;}
+	.portpolioListTopArea{height: 60px; background: #4374D9; color: white; box-shadow: 2px 2px 5px black;}
 	
-	#portpolioListText{font-size: 25pt; font-weight: bolder; margin-top: 25px; padding-left: 40px; padding-right: 30px; display:inline-block; float: left;}
+	#portpolioListText{font-size: 18pt; font-weight: bolder; margin-top: 12px; padding-left: 40px; padding-right: 30px; display:inline-block; float: left;}
 	
 	#portpolioEnrollBtn{
 		display: inline-table;
@@ -29,44 +31,52 @@
 	}
 	
 	#portpolioListContent{
-		height: 1370px;
+		height: 1120px;
 		margin-top: 30px;
 	}
 	
 	.imageEditTap{
 		width: 25%;
-		height: 100px;
+		height: 70px;
 		display: inline-block;
-		margin-left: 170px;
+		margin-left: 150px;
 		margin-top: 30px;
 		cursor: pointer;
-		background: rgb(52, 73, 94);
+		background: rgb(52, 73, 94, 0.8);
 		color: white;
-		font-size: 20pt;
+		font-size: 15pt;
 		font-weight: bold;
-		line-height: 90px;
+		line-height: 70px;
 		padding-left: 30px;
 		border-radius: 10px;
+	}
+	
+	.imageEditTap:hover{
+		background: rgb(52, 73, 94);
 	}
 	
 	.videoEditTap{
 		width: 25%;
-		height: 100px;
+		height: 70px;
 		display: inline-block;
-		margin-left: 170px;
+		margin-left: 150px;
 		margin-top: 30px;		
 		cursor: pointer;
-		background: rgb(52, 73, 94);
+		background:  rgb(52, 73, 94, 0.8);
 		color: white;
-		font-size: 20pt;
+		font-size: 15pt;
 		font-weight: bold;
-		line-height: 90px;
+		line-height: 70px;
 		padding-left: 30px;
 		border-radius: 10px;
 	}
 	
+	.videoEditTap:hover{
+		background: rgb(52, 73, 94);	
+	}
+	
 	.portpolioBoard{
-		height: 1030px;
+		height: 830px;
 		margin: 30px;
 		margin-top: 30px;
 		border-top: 1px solid lightgray;		 
@@ -74,8 +84,8 @@
 	
 	.portpolioThumb{
 		width: 18%;
-		height: 200px;
-		border: 1px solid black;
+		height: 160px;
+		border: 1px solid lightgrey;
 		float: left;
 		margin: 2%;
 		margin-left: 4%;
@@ -198,14 +208,24 @@
 		height: 40px;
 		background: rgb(52, 152, 219);
 		color: white;
+		display: inline-block;
+		cursor: pointer;
+		text-align: center;
+		line-height: 40px;
+		border-radius: 10px;
 	}
 	
 	#deleteBtn{
 		margin: 8px;
 		width: 9%;
 		height: 40px;
-		background: rgb(231, 76, 60);
-		color: white;		
+		background: rgb(52, 152, 219);
+		color: white;
+		display: inline-block;
+		cursor: pointer;
+		text-align: center;
+		line-height: 40px;
+		border-radius: 10px;		
 	}
 	
 	.replyArea{
@@ -261,7 +281,12 @@
 		width: 9%;
 		height: 40px;
 		background: rgb(52, 152, 219);
-		color: white;			
+		color: white;
+		display: inline-block;
+		cursor: pointer;
+		text-align: center;
+		line-height: 40px;
+		border-radius: 10px;			
 	}
 	
 </style>
@@ -343,8 +368,8 @@
 						</div>						
 					</div>
 					<div class="BtnArea">
-						<button id="updateBtn">수정</button>
-						<button id="deleteBtn">삭제</button>
+						<div id="updateBtn">수정</div>
+						<div id="deleteBtn">삭제</div>
 					</div>					
 					<div style="clear: both;"></div>
 					<div class="replyArea">
@@ -368,7 +393,7 @@
 							</div>
 							<form>
 								<textarea id="repEnrollCon" name="repEnrollCon" rows="5" cols="95" style="resize: none;"></textarea><br>
-								<button id="repEnrollBtn" type="submit" style="float: right;">등록</button>								
+								<div id="repEnrollBtn" type="submit" style="float: right;">등록</div>								
 							</form>
 						</div>
 					</div>

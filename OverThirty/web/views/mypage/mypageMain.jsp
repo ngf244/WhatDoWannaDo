@@ -7,9 +7,9 @@
 <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
 <style>
 	/* 마이페이지 메인 상단 프로필 부분 */
-	#mypageArea{width: 100%; text-align: left;}
-	.mypageTopArea{height: 100px; background: #4374D9; color: white; font-size: 25pt; box-shadow: 2px 2px 5px black;}
-	#mypageText{font-weight: bolder; margin-top: 25px; padding-left: 40px; padding-right: 30px; display:inline-block; float: left;}
+	#mypageArea{width: 80%; margin: auto; text-align: left;}
+	.mypageTopArea{z-index: -1; height: 80px; background: #4374D9; color: white; font-size: 22pt; box-shadow: 2px 2px 5px black; position: relative;}
+	#mypageText{font-weight: bolder; margin-top: 20px; padding-left: 40px; padding-right: 30px; display:inline-block; float: left;}
 /* 	.requestBtn{
 		width: 100px; 
 		height: 30px; 
@@ -52,7 +52,7 @@
 	  height: 100%;
 	  border-radius: 100px;
 	  background: red;
-	  z-index: -1;
+	  z-index: -2;
 	  background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
 	  opacity: .4;
 	  transform: rotateX(0);
@@ -110,7 +110,7 @@
 	  display: block;
 	  padding: 10px 0;
 	  border-radius: 100px;
-	  font-size: 30px;
+	  font-size: 25px;
 	  background: #fff;
 	  transition: all 1s cubic-bezier(0.875, -0.555, 0.190, 1.640);
 	  transform: translateY(-3px) translateZ(5px) rotateX(0);
@@ -132,18 +132,18 @@
 	  transform: translateY(-3px) translateZ(5px) rotateX(0);
 	  background: #fff;
 	}	
-	#reqGifBtn{width: 200px; margin-left: 800px; margin-top: 40px;}	
+	#reqGifBtn{width: 200px; margin-left: 600px; margin-top: 35px;}	
 	
 	
 	/* 회원 정보 영역 */
-	.myprofileArea{height: 400px; border: 1px solid black; margin-top: 30px;}
+	.myprofileArea{height: 400px; border: 1px solid lightgray; margin-top: 30px; border-radius: 10px;}
 	.normalInfo{border-bottom: 1px solid silver; height: 220px;}
 	#userId{color: rgb(52, 152, 219); display: inline-block; font-size: 20pt; font-weight: bold; margin-top: 10px; margin-left: 10px;}
 	#userId + span{font-size: 15pt; font-weight: bold; padding-left: 5px;}
 	#userInfoTable{width: 80%; height:120px; margin-top: 20px;}
 		
 	/* 프로필 이미지 */
-	.profileImage{width: 180px; height: 180px; border: 1px solid black; margin: 20px; display:inline-block; border-radius: 10px; overflow: hidden; float: left;}
+	.profileImage{width: 160px; height: 160px; border: 1px solid lightgray; margin: 20px; display:inline-block; border-radius: 10px; overflow: hidden; float: left;}
 	.profile {
         width: 100%;
         height: 100%;
@@ -189,7 +189,7 @@
 		margin: 15% auto;
 		padding: 20px;
 		border: 1px solid #888;
-		width: 60%;
+		width: 45%;
 		height: 1120px;
 		border-radius: 10px;
 	}
@@ -202,7 +202,7 @@
 		 padding-top: 10px;
 		 width: 100px;
 		 border-radius: 10px;
-		 margin-left: 460px;
+		 margin-left: 300px;
 		 margin-top: 15px;
 		 font-size: 13pt; 
 		 font-weight: bold;
@@ -225,26 +225,26 @@
 	}
 		
 	/* 회원정보 수정창 내용 */
-	#basicInfoText{width: 80%; height: 60px; background: rgb(102, 102, 102); color: white; margin: 20px; margin-left: 120px; font-size: 20pt; font-weight: bold; text-align: center; line-height: 55px; border-radius: 10px;}
+	#basicInfoText{width: 80%; height: 60px; background: rgb(102, 102, 102); color: white; margin: 20px; margin-left: 90px; font-size: 18pt; font-weight: bold; text-align: center; line-height: 55px; border-radius: 10px;}
 	
-	#addInfoText{width: 80%; height: 60px; background: rgb(102, 102, 102); color: white; margin: 20px; margin-left: 120px; font-size: 20pt; font-weight: bold; text-align: center; line-height: 55px; border-radius: 10px;}	
+	#addInfoText{width: 80%; height: 60px; background: rgb(102, 102, 102); color: white; margin: 20px; margin-left: 90px; font-size: 18pt; font-weight: bold; text-align: center; line-height: 55px; border-radius: 10px;}	
 	
-	.basicInfo>table{margin: 50px; margin-left: 200px; font-size: 15pt; line-height: 30px;}
-	.addInfo>table{margin: 50px; margin-left: 200px; font-size: 15pt; line-height: 30px;}
+	.basicInfo>table{margin: 50px; margin-left: 150px; font-size: 14pt; line-height: 30px;}
+	.addInfo>table{margin: 50px; margin-left: 150px; font-size: 14pt; line-height: 30px;}
 	
 	input{border-radius: 5px; height: 25px;}
 	textarea{border-radius: 5px; resize: none; margin-top: 30px;}
 	
 	/* 현재 포인트&캐쉬 */
-	.point-cash-area{height: 120px; margin-top: 30px;}
-	.point{width: 47%; height: 120px; border: 1px solid black; display: inline-block; border-radius: 5px;}
-	.cash{width: 47%; height: 120px; border: 1px solid black; display: inline-block; margin-left: 30px; border-radius: 5px;}
+	.point-cash-area{height: 110px; margin-top: 25px;}
+	.point{width: 47%; height: 110px; border: 1px solid lightgray; display: inline-block; border-radius: 5px;}
+	.cash{width: 47%; height: 110px; border: 1px solid lightgray; display: inline-block; margin-left: 30px; border-radius: 5px;}
 	.point>table{
 		width: 85%;
 		height: 80%;
 		text-align: left;
-		font-size: 30pt;
-		margin-left: 48px;
+		font-size: 25pt;
+		margin-left: 42px;
 		font-weight: bolder;
 	}
 	
@@ -252,14 +252,14 @@
 		width: 85%;
 		height: 80%;
 		text-align: left;
-		font-size: 30pt;
-		margin-left: 48px;
+		font-size: 25pt;
+		margin-left: 42px;
 		font-weight: bolder;
 	}
 	
 	/* 내 글 관리 부분 */
-	#mypostManagement{height: 830px; margin-top: 30px;}
-	.mypostText{height: 70px; border: 1px solid black; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #D5D5D5;}
+	#mypostManagement{height: 830px; margin-top: 25px;}
+	.mypostText{text-indent: 10px; height: 70px; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #EAEAEA;}
 	.mypostArea{height: 700px; margin-top: 30px;}
 	.mypostArea>div>span{font-size: 14pt; margin-left: 20px; font-weight: bold;}
 	#replyText{font-size: 14pt; margin-left: 20px; font-weight: bold;}
@@ -267,30 +267,33 @@
 		float: left;
 		width: 47%;
 		height: 400px;
-		border: 1px solid black;
+		border: 1px solid lightgray;
 		display: inline-block;
+		border-radius: 10px;
 	}
 	.cashArea{
 		float: right;
 		width: 47%;
 		height: 400px;
-		border: 1px solid black;
-		display: inline-block;		
+		border: 1px solid lightgray;
+		display: inline-block;
+		border-radius: 10px;		
 	}
 	.replyArea{
 		width: 100%;
 		height: 300px;
-		border: 1px solid black;
+		border: 1px solid lightgray;
 		margin-top: 25px;
+		border-radius: 10px;
 	}
 	.postList{line-height: 45px; padding: 15px; padding-left: 30px;}
-	.replayList1{width: 45%; line-height: 45px; padding: 15px; padding-left: 30px; float: left; margin-right: 36px;}
-	.replayList2{width: 45%; line-height: 45px; padding: 15px; padding-left: 30px; float: left;}
+	.replayList1{width: 45%; line-height: 45px; padding: 15px; padding-left: 22px; float: left; margin-right: 30px;}
+	.replayList2{width: 45%; line-height: 45px; padding: 15px; padding-left: 22px; float: left;}
 	
 	/* 나의 의뢰/작업 현황 */
-	#myReqWorkState{height: 810px; margin-top: 30px;}
-	.myReqWorkStateText{height: 70px; border: 1px solid black; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #D5D5D5;}
-	#allReqListBtn{
+	#myReqWorkState{height: 810px; margin-top: 25px;}
+	.myReqWorkStateText{text-indent: 10px; height: 70px; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #EAEAEA;}
+/* 	#allReqListBtn{
 		float: right; 
 		background: rgb(39, 174, 96); 
 		font-size: 12pt; 
@@ -303,29 +306,43 @@
 		border-radius: 10px;
 		line-height: 50px;
 		cursor: pointer;
-	}
-	.myReqWorkStateArea{height: 700px; margin-top: 30px;}
-	#myReqStateText{font-size: 15pt; color: white; font-weight: bolder; padding-left: 30px; margin-top: 10px;}
-	#myWorkStateText{font-size: 15pt; color: white; font-weight: bolder; padding-left: 30px; margin-top: 10px;}
-	.myReqState{height: 340px; border: 1px solid black; border-radius: 15px; margin: 10px; background: rgb(52, 152, 219);}
-	.myWorkState{height: 340px; border: 1px solid black; margin-top:15px; border-radius: 15px; margin: 10px; background: rgb(241, 179, 80);}
-	.recruit{width: 25%; height: 280px; margin: 10px; float: left; background: black; color: white; font-size: 14pt;}
-	.working1{width: 25%; height: 280px; margin: 10px; float: left; margin-left: 10px; background: black; color: white; font-size: 14pt;}
-	.complete1{width: 25%; height: 280px; margin: 10px; float: left; margin-left: 10px; background: black; color: white; font-size: 14pt;}
-	#arrow_icon_area{width: 8%; height: 280px; margin: 10px; float: left;}
+	} */
+	.myReqWorkStateArea{height: 700px; margin-top: 25px;}
+	#myReqStateText{font-size: 15pt; color: white; font-weight: bolder; padding-left: 30px; margin-top: 15px; padding-top: 10px;}
+	#myWorkStateText{font-size: 15pt; color: white; font-weight: bolder; padding-left: 30px; margin-top: 15px; padding-top: 10px;}
+	.myReqState{height: 340px; border-radius: 15px; margin: 10px; background: rgb(52, 152, 219);}
+	.myWorkState{height: 340px; margin-top:15px; border-radius: 15px; margin: 10px; background: rgb(241, 179, 80);}
+	.recruit{width: 24%; height: 260px; margin: 10px; float: left; background: black; color: white; font-size: 14pt; border-radius: 10px;}
+	.working1{width: 24%; height: 260px; margin: 10px; float: left; background: black; color: white; font-size: 14pt; border-radius: 10px;}
+	.complete1{width: 24%; height: 260px; margin: 10px; float: left; background: black; color: white; font-size: 14pt; border-radius: 10px;}
+	#arrow_icon_area{width: 8%; height: 260px; margin: 10px; float: left; margin-right: 18px;}
 	.arrow{margin-top: 90px; margin-left: 2px;}
-	.participate{width: 25%; height: 280px; border: 1px solid black; margin: 10px; float: left; background: black; color: white; font-size: 14pt;}
-	.working2{width: 25%; height: 280px; border: 1px solid black; margin: 10px; float: left; margin-left: 10px; background: black; color: white; font-size: 14pt;}
-	.complete2{width: 25%; height: 280px; border: 1px solid black; margin: 10px; float: left; margin-left: 10px; background: black; color: white; font-size: 14pt;}
-	.innerArea{width: 100%; height: 170px; background: silver; margin-top: 20px; margin-bottom: 10px; z-index: 2;}
-	.innerArea + span{font-size: 10pt;}
+	.participate{width: 24%; height: 260px; margin: 10px; float: left; background: black; color: white; font-size: 14pt; border-radius: 10px;}
+	.working2{width: 24%; height: 260px; margin: 10px; float: left; background: black; color: white; font-size: 14pt; border-radius: 10px;}
+	.complete2{width: 24%; height: 260px; margin: 10px; float: left; background: black; color: white; font-size: 14pt; border-radius: 10px;}
+	.innerArea{width: 100%; height: 140px; background: silver; margin-top: 20px; margin-bottom: 10px; z-index: 2;}
+	.innerArea + span{font-size: 10pt; margin-left: 5px;}
+	.stepText{margin: 15px;}
 	
 	/* 포트폴리오 */
-	#portpolio{height: 865px; margin-top: 30px;}
-	.portpolioText{height: 70px; border: 1px solid black; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #D5D5D5;}
-	.portpolioArea{height: 765px; border: 1px solid black; margin-top: 30px;}
-	#smallReqBtn{font-size: 14pt; color: white; background: rgb(231, 76, 60); display: inline-block; margin-left: 50px; padding-left: 30px; padding-right: 30px; padding-bottom: 20px; border-radius: 10px; height: 45px; cursor: pointer;}
-	.portpolioList{width: 20%; height: 250px; border: 1px solid black; float: left; margin-left: 50px; margin-top: 30px;}
+	#portpolio{height: 725px; margin-top: 30px;}
+	.portpolioText{text-indent: 10px; height: 70px; font-size: 18pt; font-weight: bolder; line-height: 65px; background: lightgray;}
+	.portpolioArea{height: 625px; border: 1px solid lightgray; margin-top: 30px; border-radius: 10px;}
+	#smallReqBtn{
+		font-size: 12pt; 
+		color: white; 
+		background: rgb(231, 76, 60); 
+		display: inline; 
+		margin-left: 50px; 
+		padding: 15px;
+		padding-left: 40px;
+		padding-right: 40px;
+		border-radius: 10px; 
+		height: 45px; 
+		cursor: pointer;
+	}
+	
+	.portpolioList{width: 20%; height: 200px; border: 1px solid lightgray; float: left; margin-left: 40px; margin-top: 30px;}
 	
 	/* 페이징 처리 css */
 	.pagingCenter{
@@ -360,7 +377,7 @@
 		width: 20%;
 		height: 60px;
 		margin: 20px;
-		margin-top: 40px;
+		margin-top: 10px;
 		line-height: 60px;
 		text-align: center;
 		background-color: rgb(39, 174, 96);
@@ -372,14 +389,14 @@
 	
 	/* 캐쉬변동 */
 	#cashChange{height: 700px; margin-top: 30px;}
-	.cashChangeText{height: 70px; border: 1px solid black; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #D5D5D5;}
-	.cashChangeArea{height: 600px; border: 1px solid black; margin-top: 30px;}
-	.monthArea{width: 18%; height: 75px; border: 1px solid silver; border-radius: 100px; margin: 15px; margin-left: 540px; text-align: center; line-height: 70px;}
-	.changeList{width: 90%; height: 155px; margin-left: 60px; border-bottom: 1px solid silver;}
-	.changeClass1{height: 80%; width: 10%; border: 1px solid red; margin: 10px; border-radius: 100px; line-height: 120px; color: red; float: left;}
-	.changeClass2{height: 80%; width: 10%; border: 1px solid green; margin: 10px; border-radius: 100px; line-height: 120px; color: green; float: left;}
-	.changeClass3{height: 80%; width: 10%; border: 1px solid rgb(41, 128, 185); margin: 10px; border-radius: 100px; line-height: 120px; color: rgb(41, 128, 185); float: left;}
-	.chageDesc{float: right; padding: 60px;}
+	.cashChangeText{text-indent: 10px; height: 70px; border: 1px solid lightgray; font-size: 18pt; font-weight: bolder; line-height: 65px; background: #D5D5D5;}
+	.cashChangeArea{height: 600px; border: 1px solid lightgray; margin-top: 30px; border-radius: 10px;}
+	.monthArea{width: 18%; height: 65px; border: 1px solid lightgray; border-radius: 100px; margin: 15px; margin-left: 440px; text-align: center; line-height: 62px;}
+	.changeList{width: 90%; height: 125px; margin-left: 60px; margin-top: 20px; border-bottom: 1px solid silver; font-size: 11pt;}
+	.changeClass1{height: 65%; width: 11%; border: 1px solid red; margin: 8px; border-radius: 100px; line-height: 80px; color: red; float: left;}
+	.changeClass2{height: 65%; width: 11%; border: 1px solid green; margin: 8px; border-radius: 100px; line-height: 80px; color: green; float: left;}
+	.changeClass3{height: 65%; width: 11%; border: 1px solid rgb(41, 128, 185); margin: 8px; border-radius: 100px; line-height: 80px; color: rgb(41, 128, 185); float: left;}
+	.chageDesc{float: right; padding: 50px;}
 	
 	/* 공통 플러스 아이콘 */
 	.plusIcon{cursor: pointer;}
@@ -532,30 +549,30 @@
 				<div id="myReqWorkState">
 					<div class="myReqWorkStateText">
 						나의 의뢰/작업 현황
-						<div id="allReqListBtn">전체 의뢰 요청 리스트 보기</div>
+						<!-- <div id="allReqListBtn">전체 의뢰 요청 리스트 보기</div> -->
 						<div style="clear: both;"></div>						
 					</div>
 					<div class="myReqWorkStateArea">
 						<div class="myReqState">
 							<div id="myReqStateText">의뢰 현황</div>
 							<div class="recruit">
-								STEP 1. 지원자 모집 중
+								<span class="stepText">STEP 1. 지원자 모집 중</span>
 								<div class="innerArea"></div>
 								<span>캐쉬 게시판에 올린 글 중 지원자를 모집하고 있는 글 개수를 나타냅니다.</span>
 							</div>
 							<div id="arrow_icon_area">
-								<img class="arrow" src="../images/arrow_icon.png" width="100" height="100" style="background: white;"/>
+								<img class="arrow" src="../images/arrow_icon3.png" width="100" height="100"/>
 							</div>
 							<div class="working1">
-								STEP 2. 작업 진행 중
+								<span class="stepText">STEP 2. 작업 진행 중</span>
 								<div class="innerArea"></div>
 								<span>캐쉬 게시판에 올린 글 중 매칭이 되어 작업이 진행 중인 글 개수를 나타냅니다.</span>
 							</div>
 							<div id="arrow_icon_area">
-								<img class="arrow" src="../images/arrow_icon.png" width="100" height="100" style="background: white;"/>
+								<img class="arrow" src="../images/arrow_icon3.png" width="100" height="100"/>
 							</div>
 							<div class="complete1">
-								STEP 3. 거래 완료
+								<span class="stepText">STEP 3. 거래 완료</span>
 								<div class="innerArea"></div>
 								<span>캐쉬 게시판에 올린 글 중 거래가 완료 된글 개수를 나타냅니다.</span>
 							</div>						
@@ -563,23 +580,23 @@
 						<div class="myWorkState">
 							<div id="myWorkStateText">작업 현황</div>
 							<div class="participate">
-								STEP 1. 참가 지원 중
+								<span class="stepText">STEP 1. 참가 지원 중</span>
 								<div class="innerArea"></div>
 								<span>캐쉬 게시판에 올린 글 중 참여 신청한 글 개수를 나타냅니다.</span>
 							</div>
 							<div id="arrow_icon_area">
-								<img class="arrow" src="../images/arrow_icon.png" width="100" height="100" style="background: white;"/>
+								<img class="arrow" src="../images/arrow_icon3.png" width="100" height="100"/>
 							</div>
 							<div class="working2">
-								STEP 2. 작업 진행 중
+								<span class="stepText">STEP 2. 작업 진행 중</span>
 								<div class="innerArea"></div>
 								<span>캐쉬 게시판에 올린 글 중 매칭이 되어 작업이 진행 중인 글 개수를 나타냅니다.</span>
 							</div>
 							<div id="arrow_icon_area">
-								<img class="arrow" src="../images/arrow_icon.png" width="100" height="100" style="background: white;"/>
+								<img class="arrow" src="../images/arrow_icon3.png" width="100" height="100"/>
 							</div>
 							<div class="complete2">
-								STEP 3. 거래 완료
+								<span class="stepText">STEP 3. 거래 완료</span>
 								<div class="innerArea"></div>
 								<span>캐쉬 게시판에 올린 글 중 작업이 끝나 거래가 완료 된 글 개수를 나타냅니다.</span>
 							</div>
@@ -652,7 +669,7 @@
 			<div id="editModal" class="editModalArea">
 				<div class="user-edit-content">
 					<div class="page-header">
-						<h1 style="font-size: 25pt;">회원 정보 수정</h1>
+						<h1 style="font-size: 20pt; text-indent: 10px;">회원 정보 수정</h1>
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
